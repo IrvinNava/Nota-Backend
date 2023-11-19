@@ -1,0 +1,762 @@
+:root {
+    --nota-color-blue: #223e6d;
+    --nota-color-purple: #9C3BF9;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.background {
+    background-color: #90d;
+}
+
+.load-layer {
+    background-image: url(../img/loading.svg);
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-blue,
+.btn-purple {
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+}
+.btn-blue:hover,
+.btn-purple:hover {
+    color: #fff;
+}
+.btn-blue {
+    background-color: #223e6d;
+}
+.btn-blue:hover {
+    background-color: #334f7f;
+}
+.btn-purple {
+    background-color: var(--nota-color-purple);
+}
+.btn-purple:hover {
+    background-color: #ab55fd;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.text-blue {
+    color: var(--nota-color-blue);
+}
+
+.text-purple {
+    color: var(--nota-color-purple);
+}
+
+.nota-text-gradient {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(132deg, #a027ff, #4b9aff 49%, #00f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.nota-section-title {
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 800;
+    /* font-size: 40px; */
+    color: #223e6d !important;
+    text-align: center;
+}
+
+.nota-title {
+    font-weight: 700;
+    color: #223e6d;
+}
+
+.nota-subtitle {
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #223e6d !important;
+    text-align: center;
+}
+
+.nota-title-gradient {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(132deg, #a027ff, #4b9aff 49%, #00f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.navbar {
+    box-shadow: 0px 12px 18px -6px rgba(34, 62, 109, 0.1);
+}
+
+.navbar-nav .nav-link {
+    color: #223e6d !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(34,62,109, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+}
+
+/* Content */
+
+section {
+    padding: 54px 0;
+}
+
+.nota-bg-collections {
+    background-image: url(https://notainclusion.com/wp-content/uploads/2023/07/nota-bg-horizontal.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    padding-bottom: 220px;
+}
+
+.collection-card {
+    background-color: #f2f6ff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    min-height: 350px !important;
+    border-radius: 10px;
+    padding-right: 30px;
+    transition: all .5s;
+}
+
+.collection-card:hover::after {
+    background: linear-gradient(0deg, rgb(111, 8, 191) 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.collection-card::after {
+    content: '';
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.collection-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 20px 20px;
+    z-index: 1;
+}
+
+.collection-info span {
+    font-weight: 700;
+    color: #00f5d4;
+    text-decoration: none;
+}
+
+.collection-info a i,
+.speaker-card-link i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.collection-title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.collection-number {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.collections-carousel .item {
+    /* padding-right: 30px; */
+    margin: 0 15px;
+}
+
+.collections-carousel .slick-arrow,
+.testimonials-carousel .slick-arrow {
+    background-color: #fff;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 8px 11px;
+    cursor: pointer;
+}
+
+.collections-carousel .slick-arrow {
+    top: -55px;
+}
+
+.testimonials-carousel .slick-arrow {
+    top: -80px;
+}
+
+.collections-carousel .fa-chevron-left {
+    right: 50px;
+}
+
+.collections-carousel .fa-chevron-right {
+    right: 20px;
+}
+
+.testimonials-carousel .fa-arrow-left-long {
+    right: 150px;
+}
+
+.testimonials-carousel .fa-arrow-right-long {
+    right: 111px;
+}
+
+/* Filters  */
+
+.filters-widget {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-gap: 5
+}
+
+.filters-widget input {
+    border: 1px solid #223e6d;
+    border-radius: 20px;
+}
+
+.experience-card,
+.speaker-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+    min-height: 350px !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.speaker-card {
+    min-width: auto;
+}
+
+.experience-card-photo {
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    min-height: 200px;
+    width: 100%;
+    transition: all .5s;
+}
+
+.experience-card:hover .experience-card-photo {
+    background-size: 110%;
+}
+
+.experience-card-photo::after {
+    content: '';
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.experience-card-info,
+.speaker-card-info {
+    padding: 20px;
+}
+
+.experience-card-title,
+.speaker-card-title {
+    max-height: 38px;
+    overflow: hidden;
+    font-weight: 700;
+    color: #223e6d;
+}
+
+.speaker-card-title span {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.experience-card-excerpt {
+    max-height: 62px;
+    overflow: hidden;
+}
+
+.experience-card-info p,
+.speaker-card-info p {
+    font-weight: 500;
+    color: #223e6d;
+    margin: 0;
+}
+
+.experience-card-info small {
+    color: #223e6d;
+}
+
+.experience-card-author-container {
+    display: flex;
+    border-top: 1px solid #223e6d;
+    overflow: hidden;
+}
+
+.speaker-card-author-container {
+    border-top: 1px solid #223e6d;
+    overflow: hidden;
+}
+
+.experience-card-author-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.experience-card-author,
+.speaker-card-author {
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.experience-card-titles {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.speaker-card-link {
+    color: #9c3bf9 !important;
+    font-weight: 700 !important;
+}
+
+.filter-container {
+    border: 1px solid #223e6d;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.btn-filter {
+    background-color: #fff;
+    border: 1px solid #223e6d;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    color: #223e6d;
+}
+
+.btn-filter.filter-active {
+    background-color: #223e6d;
+    color: #fff;
+    border: 1px solid #223e6d;
+}
+
+.speakers-filters .btn-filter {
+    font-size: 14px;
+    padding: 3px 6px;
+
+}
+
+.nota-empty-container {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nota-empty {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: center;
+    color: #859bb9;
+    font-weight: 600;
+    max-width: 300px;
+}
+
+.nota-empty::after {
+    content: '';
+    background-image: url(../img/empty-box.png);
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Speakers */
+
+.speakers-title {
+    font-size: 6em;
+    font-weight: 700;
+    color: #223e6d;
+}
+
+.speakers-mosaic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speakers-mosaic-container>div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.nota_bg_1 {
+    background-image: url(../img/speakers/spkr_nota_1.jpg)
+}
+
+.nota_bg_2 {
+    background-image: url(../img/speakers/spkr_nota_2.jpg)
+}
+
+.go-back-btn {
+    color: #223e6d;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.go-back-btn i {
+    font-size: 12px;
+}
+
+/* Speakers */
+
+.speaker-page {
+    background-image: url(https://notainclusion.com/wp-content/uploads/2023/07/nota-bg-vertical.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+}
+
+.speaker-detail-container {
+    color: #223e6d;
+}
+
+.speaker-detail-container h1 {
+    color: #9c3bf9;
+    font-weight: 700;
+}
+
+.speaker-detail-container h1 span {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.speaker-detail-container hr {
+    border: 1px solid #223e6d;
+    opacity: 1;
+}
+
+.speaker-detail-container h5 {
+    font-weight: 600;
+}
+
+.speaker-detail-container h5 i {
+    font-weight: 300;
+}
+
+.speaker-description {
+    font-size: 16px;
+}
+
+.nota-tag {
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 8px;
+    color: #9c3bf9;
+    border-radius: 10px;
+    margin: 0 3px 5px 0;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.speaker-tags-container .nota-tag {
+    border-color: var(--nota-color-purple)
+}
+
+.speaker-tags-container .nota-tag:hover {
+    background-color: #9c3bf9;
+    color: #fff;
+}
+
+.experience-tags-container .nota-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+    color: #fff;
+}
+
+.experience-tags-container .nota-tag:hover {
+    background-color: #fff;
+    color: var(--nota-color-blue);
+}
+
+.speaker-video-container {
+    background-color: #f2f6ff;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.speaker-testimonial {
+    /* max-width: 80%; */
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: var(--nota-color-blue);
+}
+
+.quotes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quotes i {
+    color: #C083FB;
+}
+
+.testimonials-author {
+    font-weight: 700;
+}
+
+.slick-slide {
+    transform: scale(1);
+    transition: 0.3s ease-in-out all;
+}
+.slick-slide.slick-center {
+    opacity: 1;
+    transform: scale(1.08);
+    transition: all .5s;
+}
+.testimonials-carousel:after,
+.testimonials-carousel:before {
+    content: "";
+    background: #FAFAFA;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 12%;
+    z-index: 100;
+}
+.testimonials-carousel:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+.testimonials-carousel:before {
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Single Experience */
+
+.experience-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.experience-cover-content {
+    background-image: url(https://notainclusion.com/wp-content/uploads/2023/07/nota-bg-vertical.svg),
+    linear-gradient(0deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+    background-size: 150px, auto;
+    background-repeat: no-repeat,no-repeat;
+    background-position: top right;
+    padding: 80px 50px;
+    color: #fff;
+}
+
+.experience-cover-content hr {
+    border: 1px solid #fff;
+    opacity: 1;
+}
+
+.experience-speaker-card-photo {
+    background-position: 0 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 260px;
+}
+
+.experience-formats-container {
+    border-radius: 10px;
+    border: 1px solid var(--nota-color-blue);
+}
+
+.experience-formats-container h6 {
+    color: var(--nota-color-blue);
+    font-weight: 600;
+}
+
+.experience-formats-container ul {
+    padding: 0;
+}
+
+.experience-formats-container li {
+    list-style: none;
+}
+
+.experience-formats-container i {
+    color: #8d99b3;
+}
+
+.experience-takeaways {
+    background-color: #f2f6ff;
+}
+
+.experience-takeaways p {
+    margin: 0;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f2f6ff;
+    padding: 54px 0;
+}
+
+footer p {
+    color: #223e6d;
+    font-weight: 500;
+}
+
+footer a {
+    color: #223e6d;
+}
+
+.social-link {
+    background-color: #223e6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.social-link:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+    .speakers-title {
+        font-size: 5em;
+    }
+
+    .speakers-mosaic-container>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .speaker-testimonial {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 3px solid #874bff;
+    }
+
+    .speakers-title {
+        font-size: 4em;
+    }
+
+    .speakers-mosaic-container>div {
+        width: 70px;
+        height: 70px;
+    }
+    .experience-cover-content {
+        background-size: 80px, auto;
+        background-position: bottom right;
+        padding: 80px 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 54px 20px;
+    }
+
+    .collections-carousel .item {
+        padding-right: 0;
+    }
+
+    .speakers-title {
+        margin-bottom: 50px;
+    }
+
+    .speaker-testimonial {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .experience-cover-content {
+        background-size: 90px, auto;
+        background-position: top right;
+    }
+}

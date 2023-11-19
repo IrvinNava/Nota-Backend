@@ -1,0 +1,289 @@
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+html:not(.navbar-vertical-collapsed) .navbar-vertical.navbar-expand-lg .navbar-vertical-content {
+    background-image: url(https://notainclusion.com/assets/img/hm/eventbg.svg);
+    background-image: url(https://notainclusion.com/assets/img/services/processbg.svg);
+    background-image: url(https://notainclusion.com/assets/img/about/intro.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 40%;
+    background-size: initial;
+}
+
+.nota-text {
+    color: #9930ff;
+}
+
+.nota-add-btn {
+    background-image: linear-gradient(14deg, #9c2aff 0%, #5986ff 50%, #0ff 100%);
+    border: 0;
+}
+
+.navbar-vertical .navbar-vertical-content .navbar-nav .nav-link.active {
+    color: #a300fb;
+}
+
+.nav-links .nav-link.active {
+    pointer-events: none;
+}
+
+table.dataTable.table-hover>tbody>tr:hover>* {
+    box-shadow: inset 0 0 0 9999px rgba(0, 60, 199, 0.075) !important;
+}
+
+.speaker-photo {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 130%;
+    /* background-size: cover; */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.table-badges .badge-phoenix {
+    margin-bottom: 5px;
+}
+
+.proposal-details-table td {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.dashboard-category-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem !important;
+    height: 100%;
+    border-width: 1px;
+    border-bottom: 1px solid #e3e6ed;
+}
+
+/* Drag&Drop */
+.draggable-container {
+    height: 400px;
+    max-height: 400px;
+    background: #e4e9f1;
+    overflow: auto;
+}
+
+.dark .draggable-container {
+    background: #141824;
+}
+
+/* width */
+.draggable-container::-webkit-scrollbar,
+.tab-content .tab-pane::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.draggable-container::-webkit-scrollbar-track,
+.tab-content .tab-pane::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+    background: #c2ccdb;
+}
+
+/* Handle */
+.draggable-container::-webkit-scrollbar-thumb,
+.tab-content .tab-pane::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    background: #9ea8b7;
+}
+
+/* Handle on hover */
+.draggable-container::-webkit-scrollbar-thumb:hover,
+.tab-content .tab-pane::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #8692a5;
+}
+
+.elements-list {
+    height: 400px;
+    align-content: flex-start;
+}
+
+.elements-list .speaker-item {
+    background-color: #fff;
+    height: 100%;
+    padding: 10px;
+    cursor: grab;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 2px 2px rgba(182, 182, 182, 0.5);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 5px
+}
+
+.dark .elements-list .speaker-item {
+    background-color: #0f111a;
+    border: 1px solid #373e53;
+    box-shadow: 0 2px 2px rgb(0 0 0);
+}
+
+.speakers-list .speaker-item p,
+.elements-list .speaker-item p,
+.gu-transit p {
+    line-height: 12px;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.speaker-item .speaker-photo {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.elements-list .speaker-item.is-moving {
+    border: 1px solid #ebebeb;
+    background-color: #f1f2f7;
+    opacity: 0.5;
+}
+
+/* Dragula CSS  */
+.gu-mirror {
+    position: fixed !important;
+    z-index: 9999 !important;
+    opacity: .5;
+    list-style-type: none;
+    box-shadow: 0 2px 2px rgba(182, 182, 182, 0.5);
+    -webkit-align-items: center;
+    align-items: center;
+    display: block;
+    position: relative;
+    min-height: 80px;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    margin: 0 30px 10px 0;
+    background-color: #fff;
+    cursor: grabbing;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 5px;
+}
+
+.dark .gu-mirror {
+    background-color: #90d !important;
+}
+
+.dark .is-moving {
+    background-color: #0f111a !important;
+}
+
+.gu-hide {
+    display: none !important;
+}
+
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+.gu-transit {
+    /* color: #f8f9fb; */
+    /* background-color: #f8f9fb !important; */
+    /* transform: scale(1); */
+}
+
+/* Videos */
+.video-item,
+.testimonial-item,
+.key-item {
+    position: relative;
+}
+
+.video-item .remove-video,
+.testimonial-item .remove-testimonial,
+.key-item .remove-key {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* margin: 1px; */
+    padding: 5px 8px;
+    border-radius: 0 5px 0 0;
+    border: 1px solid #efd6d3;
+}
+
+.testimonial-item .remove-testimonial {
+    top: -1px;
+    right: -1px;
+}
+
+.key-item .remove-key {
+    padding: 10px 12px;
+    border-radius: 0 5px 5px 0;
+}
+
+.tab-content .tab-pane {
+    min-height: 208px;
+    max-height: 208px;
+    overflow: auto;
+}
+
+/* SELECT2 TABS */
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #3874ff !important;
+    border: 1px solid #a700ff !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff !important;
+    border-right: 1px solid #2c5ed3 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+    background-color: #1f53cd !important;
+}
+
+.dark .select2-container--default .select2-selection--multiple {
+    background-color: #141824;
+    border: 1px solid #373e53 !important;
+}
+
+/* Theme */
+
+.btn-close {
+    background-size: 12px;
+}
+
+.proposals-buttons .active {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgb(227, 230, 237);
+}
+
+.proposals-buttons .active::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-left: 1px solid rgb(227, 230, 237);
+    border-bottom: 1px solid rgb(227, 230, 237);
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -7px;
+}
