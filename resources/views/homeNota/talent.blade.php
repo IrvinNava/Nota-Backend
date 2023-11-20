@@ -250,7 +250,7 @@
                                  <img src="{{$speaker->speaker_photo}}" class="img-fluid" alt="">
                               </div>
                                  <div class="speaker-card-info">
-                                    <h6 class="speaker-card-title">{{$speaker->first_name}} {{$speaker->last_name}}<span>{{$speaker->pronouns}}</span></h6>
+                                    <h6 class="speaker-card-title">{{$speaker->first_name}} {{$speaker->last_name}}</h6>
                                     <p class="speaker-card-titles">{{$speaker->titles}}</p>
                                     <p class="speaker-card-link mt-2">View Profile<i class="fa-solid fa-chevron-right ms-2"></i></p>
                                  </div>

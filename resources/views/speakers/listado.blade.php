@@ -37,7 +37,7 @@
                                             <th class="sort align-middle white-space-nowrap" scope="col">ID</th>
                                             <th></th>
                                             <th class="sort align-middle" scope="col">NAME</th>
-                                            <th class="sort align-middle" scope="col">TOPIC</th>
+                                            <th class="sort align-middle" scope="col">CATEGORIES</th>
                                             <th class="sort align-middle" scope="col" style="width:80px;"></th>
                                         </tr>
                                     </thead>
@@ -55,7 +55,7 @@
                                             <? $categorias = explode(",", $speaker->categories); ?>
                                             <td>
                                             @foreach ($categorias as $cat)
-                                                {{ \App\Categories::getName( $cat) }}<p></p>
+                                                {{ \App\Categories::getName( $cat) }}<span>,</span>
                                             @endforeach
                                             </td>
                                             <td class="btn-reveal-trigger">

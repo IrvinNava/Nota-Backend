@@ -20,13 +20,15 @@
                <a href="{{url('talent/')}}" class="go-back-btn"><i class="fa-solid fa-chevron-left me-2"></i> Go Back</a>
             </div>
 
-            <div class="row align-items-center">
+            <div class="row">
                <div class="col-md-3">
-                  <img src="{{ $speaker->speaker_photo }}" alt="Mark Travis" class="img-fluid">
-                  <a href="" class="btn btn-lg btn-purple btn-block rounded-pill px-5 mt-3 text-center">Hire this Speaker</a>
+                  <div class="sticky-top" style="top: 15px;">
+                     <img src="{{ $speaker->speaker_photo }}" alt="Mark Travis" class="img-fluid">
+                     <a href="" class="btn btn-lg btn-purple btn-block rounded-pill px-5 mt-3 text-center">Hire this Speaker</a>
+                  </div>
                </div>
                <div class="col-md-9 speaker-detail-container">
-                  <div class="p-0 p-md-5">
+                  <div class="p-0 px-md-5">
                      <h1 class="mt-4 mt-sm-0">{{ $speaker->first_name }} {{ $speaker->last_name }} <span>{{ $speaker->pronouns }}</span></h1>
                      <h5><i>{{ $speaker->titles }}</i></h5>
                      <hr>
@@ -37,58 +39,61 @@
 
                      <h5>Fields of expertise:</h5>
                      <div class="speaker-tags-container mt-4">
-                     <? $categories = explode(",", $speaker->categories); ?>
-                     @foreach ($categories as $categorie)
+                        <? $categories = explode(",", $speaker->categories); ?>
+                        @foreach ($categories as $categorie)
                         <a href="javascript:void(0)" class="nota-tag"><?= \App\Categories::getName($categorie) ?> </a>
-                     @endforeach
+                        @endforeach
 
-                     <? $topics = explode(",", $speaker->topics); ?>
-                     @foreach ($topics as $topic)
+                        <? $topics = explode(",", $speaker->topics); ?>
+                        @foreach ($topics as $topic)
                         <a href="javascript:void(0)" class="nota-tag"><?= \App\Topics::getName($topic) ?></a>
-                     @endforeach
+                        @endforeach
 
-                     <? $tags = explode(",", $speaker->tags); ?>
-                     @foreach ($tags as $tag)
+                        <? $tags = explode(",", $speaker->tags); ?>
+                        @foreach ($tags as $tag)
                         <a href="javascript:void(0)" class="nota-tag">{{ $tag }}</a>
-                     @endforeach
-                                                         
+                        @endforeach
+
                         <!--<a href="" class="nota-tag">DEI Elementals</a>
                         <a href="" class="nota-tag">Inclusive Leadership</a>
                         <a href="" class="nota-tag">Black History Month</a>
                         <a href="" class="nota-tag">DEI Elementals</a>
                         <a href="" class="nota-tag">Inclusive Leadership</a>
 
- <a href="" class="nota-tag">diversity_equity_inclusion</a>
-                     <a href="" class="nota-tag">mental_health</a>
-                     <a href="" class="nota-tag">racial_equity</a>
-                     <a href="" class="nota-tag">intersectionality</a>
-                     <a href="" class="nota-tag">allyship</a>
-                     <a href="" class="nota-tag">leadership_development</a>
-                     
-                     <a href="" class="nota-tag">disability_awareness</a>
-                     <a href="" class="nota-tag">women_history_month</a>
-                     <a href="" class="nota-tag">military_month</a>
-                     <a href="" class="nota-tag">micro_aggressions</a>
-                     <a href="" class="nota-tag">social_activism</a>
-                     <a href="" class="nota-tag">unconscious_bias</a>
-                     
-                     <a href="" class="nota-tag">empathy_workplace</a>
-                     <a href="" class="nota-tag">bussiness_leadership</a>
-                     <a href="" class="nota-tag">female_empowerment</a>
-                     <a href="" class="nota-tag">women_in_leadership</a>
-                     <a href="" class="nota-tag">self_love</a>
-                     <a href="" class="nota-tag">healing</a>
-                     
-                     <a href="" class="nota-tag">health_wellness</a>
-                     <a href="" class="nota-tag">workplace_employee_wellness</a> -->
+                        <a href="" class="nota-tag">diversity_equity_inclusion</a>
+                        <a href="" class="nota-tag">mental_health</a>
+                        <a href="" class="nota-tag">racial_equity</a>
+                        <a href="" class="nota-tag">intersectionality</a>
+                        <a href="" class="nota-tag">allyship</a>
+                        <a href="" class="nota-tag">leadership_development</a>
+                        
+                        <a href="" class="nota-tag">disability_awareness</a>
+                        <a href="" class="nota-tag">women_history_month</a>
+                        <a href="" class="nota-tag">military_month</a>
+                        <a href="" class="nota-tag">micro_aggressions</a>
+                        <a href="" class="nota-tag">social_activism</a>
+                        <a href="" class="nota-tag">unconscious_bias</a>
+                        
+                        <a href="" class="nota-tag">empathy_workplace</a>
+                        <a href="" class="nota-tag">bussiness_leadership</a>
+                        <a href="" class="nota-tag">female_empowerment</a>
+                        <a href="" class="nota-tag">women_in_leadership</a>
+                        <a href="" class="nota-tag">self_love</a>
+                        <a href="" class="nota-tag">healing</a>
+                        
+                        <a href="" class="nota-tag">health_wellness</a>
+                        <a href="" class="nota-tag">workplace_employee_wellness</a> -->
                      </div>
+
+                     <div class="speaker-descroption mt-4">
+                        <p> <?= $speaker->description ?></p>
+                     </div>
+
                   </div>
                </div>
             </div>
 
-            <div class="speaker-descroption mt-5">
-               <p> <?= $speaker->description ?></p>
-            </div>
+
 
          </div>
       </section>
@@ -98,14 +103,14 @@
             @foreach ($videos as $video)
             <div class="video-container">
                <?=
-                 $video->iframe
+               $video->iframe
                ?>
             </div>
             @endforeach
          </div>
       </section>
 
-      <section class="pb-0">
+      <section>
          <div class="container">
             <h3 class="nota-title mb-5">What our clients say about this speaker</h3>
          </div>

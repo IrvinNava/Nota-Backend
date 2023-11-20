@@ -17,7 +17,7 @@ body {
 }
 
 .load-layer {
-    background-image: url(../img/loading.svg);
+    background-image: url(../../img/loading.svg);
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
@@ -315,6 +315,11 @@ section {
     margin: 0;
 }
 
+.speaker-card-titles {
+    height: 45px;
+    overflow: hidden;
+}
+
 .experience-card-info small {
     color: #223e6d;
 }
@@ -438,11 +443,11 @@ section {
 }
 
 .nota_bg_1 {
-    background-image: url(../img/speakers/spkr_nota_1.jpg)
+    background-image: url(../../img/speakers/spkr_nota_1.jpg)
 }
 
 .nota_bg_2 {
-    background-image: url(../img/speakers/spkr_nota_2.jpg)
+    background-image: url(../../img/speakers/spkr_nota_2.jpg)
 }
 
 .go-back-btn {
@@ -723,6 +728,10 @@ footer a {
         border-top: 3px solid #874bff;
     }
 
+    .speaker-page {
+        background-size: 100px;
+    }
+
     .speakers-title {
         font-size: 4em;
     }
@@ -745,6 +754,10 @@ footer a {
 
     .collections-carousel .item {
         padding-right: 0;
+    }
+
+    .speaker-page {
+        background-size: 80px;
     }
 
     .speakers-title {

@@ -44,21 +44,21 @@
 
                             <div class="row">
                                 <div class="col-6">
-                                    <h4 class="mb-3">First Name</h4>
-                                    <input id="speaker_name" name="speaker_name" class="form-control mb-5 required" type="text" placeholder="Write the name here..." />
+                                    <h4 class="mb-3">First Name*</h4>
+                                    <input id="speaker_name" name="speaker_name" class="form-control required" type="text" placeholder="Write the name here..." />
                                 </div>
                                 <div class="col-6">
-                                    <h4 class="mb-3">Last Name</h4>
-                                    <input id="last_name" name="last_name" class="form-control mb-5 required" type="text" placeholder="Write the name here..." />
+                                    <h4 class="mb-3">Last Name*</h4>
+                                    <input id="last_name" name="last_name" class="form-control required" type="text" placeholder="Write the name here..." />
                                 </div>
 
-                                <div class="col-md-8 mb-5">
-                                    <h4 class="mb-2">Speaker titles</h4>
+                                <div class="col-md-8 mt-4 mb-5">
+                                    <h4 class="mb-2">Speaker titles*</h4>
                                     <input id="speaker_titles" name="speaker_titles" class="form-control mb-0 required" type="text" placeholder="e.g. Author, Psychologist, etc..." />
                                     <small>Add titles separate with coma (,)</small>
                                 </div>
 
-                                <div class="col-md-4 mb-5">
+                                <div class="col-md-4 mt-4 mb-5">
                                     <h4 class="mb-2">Pronouns</h4>
                                     <input id="speaker_pronouns" name="speaker_pronouns" class="form-control mb-0 " type="text" placeholder="e.g. She/Her" />
                                     <small>Add pronouns separate with diagonal (/)</small>
@@ -69,7 +69,16 @@
 
                             <div class="mb-6">
                                 <h4 class="mb-3"> Speaker description</h4>
-                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
+                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"18rem","placeholder":"Write the description here..."}'></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="mb-3"> Categories</h4>
+                                <select class="form-select select2 required" id="speaker_categories" name="speaker_categories" multiple="multiple" style="width:100%;">
+                                    @foreach ($categories as $cat)
+                                    <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
                             <div class="mb-6">
@@ -129,23 +138,14 @@
                             </div>
 
                             <div class="mb-6">
-                                <h4 class="mb-3"> Categories</h4>
-                                <select class="form-select select2 required" id="speaker_categories" name="speaker_categories" multiple="multiple" style="width:100%;">
-                                    @foreach ($categories as $cat)
-                                        <option value="{{ $cat->id }}">{{  $cat->title }}</option>
+                                <h4 class="mb-3"> Topics</h4>
+                                <select class="form-select select2" id="speaker_topics" name="speaker_topics" multiple="multiple" style="width:100%;">
+                                    @foreach ($topics as $topic)
+                                    <option value="{{ $topic->id }}">{{ $topic->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
-
-                            <div class="mb-6">
-                            <h4 class="mb-3"> Topics</h4>
-                            <select class="form-select select2" id="speaker_topics" name="speaker_topics" multiple="multiple" style="width:100%;">
-                                @foreach ($topics as $topic)
-                                    <option value="{{ $topic->id }}">{{  $topic->title }}</option>
-                                @endforeach
-                            </select>
-                        </div> 
-                    </div>
+                        </div>
 
                         <div class="col-12 col-xl-4">
                             <div class="row g-2">
@@ -194,30 +194,30 @@
                                             <h4 class="card-title mb-4">Speaker photo</h4>
                                             <div>
                                                 <div class="col-md-12">
-                                            <hr>
-                                            <label for="registro-input-titulo"></label>
-                                            <div class="gallery-container">
-                                                <div class="row">
-                                                     
-                                                </div>
-                                            </div>
-                                            <hr>
+                                                    <hr>
+                                                    <label for="registro-input-titulo"></label>
+                                                    <div class="gallery-container">
+                                                        <div class="row">
 
-                                            <input type="file" id="registro-input-gallery" class="filepond mt-3" name="upload_file" multiple>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
 
-                                            <hr>
-                                            
-                                            <div class="collapse" id="collapseExample">
-                                                <div class="card card-body bg-danger text-white">
-                                                    <p class="card-text">La experiencia de los usuarios al acceder a un sitio web del Museo Amparo es importante para todo el ecosistema de Amparo. Por lo que antes de subir una imagen es importante asegurarse de lo siguiente:</p>
-                                                    <ul>
-                                                        <li>1.  Las imágenes deben contar con las dimensiones recomendadas previamente.</li>
-                                                        <li>2.  Las imágenes deben pasar por un proceso de compresión. Te recomendamos usar alguna herramienta en Internet como: <a href="https://tinypng.com/" target="_blank"><b><u>https://tinypng.com/</u></b> <i class="icon-one-finger-click2"></i></a></li>
-                                                    </ul>
-                                                    <p><b>¿Por qué esto es importante?</b><br>Al respetar dimensiones y pasar los recursos gráficos por un proceso de compasión ayudamos a que la carga de un sitio web suceda de manera rápida y eficiente.</p>
+                                                    <input type="file" id="registro-input-gallery" class="filepond mt-3" name="upload_file" multiple>
+
+                                                    <hr>
+
+                                                    <div class="collapse" id="collapseExample">
+                                                        <div class="card card-body bg-danger text-white">
+                                                            <p class="card-text">La experiencia de los usuarios al acceder a un sitio web del Museo Amparo es importante para todo el ecosistema de Amparo. Por lo que antes de subir una imagen es importante asegurarse de lo siguiente:</p>
+                                                            <ul>
+                                                                <li>1. Las imágenes deben contar con las dimensiones recomendadas previamente.</li>
+                                                                <li>2. Las imágenes deben pasar por un proceso de compresión. Te recomendamos usar alguna herramienta en Internet como: <a href="https://tinypng.com/" target="_blank"><b><u>https://tinypng.com/</u></b> <i class="icon-one-finger-click2"></i></a></li>
+                                                            </ul>
+                                                            <p><b>¿Por qué esto es importante?</b><br>Al respetar dimensiones y pasar los recursos gráficos por un proceso de compasión ayudamos a que la carga de un sitio web suceda de manera rápida y eficiente.</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
 
                                             </div>
 
@@ -305,7 +305,7 @@
             let speakerStatus = $("#speakerStatus");
             if (speakerStatus.length) {
 
-                $("#speakerStatus").click( function(){
+                $("#speakerStatus").click(function() {
                     console.log("click");
                     if (speakerStatus.is(':checked')) {
                         speakerStatus.attr('checked', true);
@@ -319,26 +319,23 @@
             }
         });
 
-        $(function(){
-            Dropzone.options.dropzone =
-            {
-            maxFilesize: 12,
-            renameFile: function(file) {
-                var dt = new Date();
-                var time = dt.getTime();
-               return time+file.name;
-            },
-            acceptedFiles: ".jpeg,.jpg,.png,.gif",
-            addRemoveLinks: true,
-            timeout: 5000,
-            success: function(file, response) 
-            {
-                console.log(response);
-            },
-            error: function(file, response)
-            {
-               return false;
-            }
+        $(function() {
+            Dropzone.options.dropzone = {
+                maxFilesize: 12,
+                renameFile: function(file) {
+                    var dt = new Date();
+                    var time = dt.getTime();
+                    return time + file.name;
+                },
+                acceptedFiles: ".jpeg,.jpg,.png,.gif",
+                addRemoveLinks: true,
+                timeout: 5000,
+                success: function(file, response) {
+                    console.log(response);
+                },
+                error: function(file, response) {
+                    return false;
+                }
             };
         });
     </script>

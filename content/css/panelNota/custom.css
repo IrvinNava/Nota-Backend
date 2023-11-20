@@ -228,7 +228,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 .tab-content .tab-pane {
-    min-height: 208px;
+    min-height: 250px;
     max-height: 208px;
     overflow: auto;
 }
@@ -286,4 +286,17 @@ textarea::-webkit-scrollbar-thumb:hover {
     margin-left: auto;
     margin-right: auto;
     bottom: -7px;
+}
+
+.form-control {
+    font-size: 14px;
+}
+
+.form-control.error {
+    border-color: #dc3545;
+}
+
+label.error {
+    color: #dc3545;
+    font-size: 14px;
 }
