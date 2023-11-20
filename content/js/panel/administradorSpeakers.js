@@ -88,11 +88,12 @@ $(function (){
             let button = $('#publishSpeaker');
             let form = $('#form-registro');
             if(form.valid()){
-                var description = tinymce.get("edit_speaker_description").getContent();
+                var description = encodeURIComponent(tinymce.get("edit_speaker_description").getContent());
                 var categorias = $('#speaker_categories').select2('val');
                 var topics = $('#speaker_categories').select2('val');
                 var tags = $('#speaker_tags').select2('val');
                 const videos = [];
+                console.log(description);
                 
                 $("#videosTabContent .video-textarea").each( function( i ) {
                     videos.push($(this).val());
@@ -104,8 +105,8 @@ $(function (){
 
                 $("#testimonialsTabContent textarea[name=speaker_item_testimonial]").each(function() {
                     array.push({
-                        testimonial: $(this).val(),
-                        author: $(this).next().val()
+                        testimonial: encodeURIComponent($(this).val()),
+                        author: encodeURIComponent($(this).next().val())
                     });
                 });
                 // then to get the JSON string
