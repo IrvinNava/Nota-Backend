@@ -6,7 +6,9 @@
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
    <meta content="" name="description">
    <meta content="" name="keywords">
-   <title>Talent | Nota Inclusion</title>
+   <title>{{ $speaker->first_name }} {{ $speaker->last_name }}) |NOTA inclusion</title>
+   <meta name="robots" content="index,follow">
+   <meta name="description" content="{{ $speaker->titles }}">
    @include('layoutPublic.header')
 </head>
 
@@ -49,10 +51,7 @@
                         <a href="javascript:void(0)" class="nota-tag"><?= \App\Topics::getName($topic) ?></a>
                         @endforeach
 
-                        <? $tags = explode(",", $speaker->tags); ?>
-                        @foreach ($tags as $tag)
-                        <a href="javascript:void(0)" class="nota-tag">{{ $tag }}</a>
-                        @endforeach
+                       
 
                         <!--<a href="" class="nota-tag">DEI Elementals</a>
                         <a href="" class="nota-tag">Inclusive Leadership</a>
