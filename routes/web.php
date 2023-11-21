@@ -290,6 +290,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('proposal/drop', 'LoginController@dropProposal');
 
     Route::get('talent', 'LoginController@talent');
+    Route::get('talent/{arregloCategorias}', 'LoginController@talentByCat');
 
     Route::get('image/upload','ImageUploadController@fileCreate');
     Route::post('image/upload/store','ImageUploadController@fileStore');

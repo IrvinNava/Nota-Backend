@@ -71,6 +71,7 @@ class LoginController extends Controller
     }
 
     public function saveSpeaker(Request $request){
+
         if($request->input('id')){
             $elemento = Speakers::where('id', $request->input('id'))->get();
             if($elemento->count()){
@@ -124,7 +125,8 @@ class LoginController extends Controller
         $elemento->last_name = $request->input('last_name');
         $elemento->titles = $request->input('speaker_titles');
         $elemento->pronouns = $request->input('speaker_pronouns');
-        $elemento->description = $_POST['description'];
+        $elemento->description =  trim($_POST['description']);
+        print_r(trim($_POST['description']));
         $elemento->categories = $_POST['categorias'];
         $elemento->startprice = $request->input('price_from');
         $elemento->limitprice = $request->input('price_to');
@@ -303,5 +305,21 @@ class LoginController extends Controller
         $categories = Categories::all();
         $speakers = Speakers::all();
         return View('homeNota.talent', compact('categories','speakers'));
+    }
+
+    public function talentByCat($arregloCategorias){
+        $categories = Categories::all();
+        //$speakers = Speakers::all();
+        $speakers = array();
+        $arregloCategorias = explode(',', str_replace('categories=', "", $arregloCategorias));
+        foreach ($arregloCategorias as $cat) {
+           $speakersCategory = SpeakerCategories::where('id_category', $cat)->get();
+           foreach ($speakersCategory as $sc) {
+                if(!in_array($sc->id_speaker, $speakers))
+                    array_push($speakers, $sc->id_speaker);
+           }
+        }
+        
+        return View('homeNota.talentcat', compact('categories','speakers','arregloCategorias'));
     }
 }

@@ -20,4 +20,15 @@ $(document).ready( function(){
             }
         })
     });
+
+    $("#searchByCategory").click(function(){
+        const arregloCategorias = [];
+        $("#accordionPanelsStayOpenExample .form-check-input").each( function( i ) {
+            if($(this).is(':checked')){
+                arregloCategorias.push($(this).val());
+            }
+        });
+        window.location = BASEURL + '/talent/' +'categories='+ arregloCategorias
+    });
+
 });

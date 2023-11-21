@@ -82,10 +82,12 @@
                               <div class="accordion-body">
 
                                  <div class="checkbox-list">
-
                                     @foreach ($categories as $cat)
+                                       <? $state = (in_array((int)$cat->id, $arregloCategorias)) ? 'checked': '' ;
+                                       ?>
+
                                        <div class="form-check">
-                                       <input class="form-check-input" type="checkbox" value="{{$cat->id}}" id="{{$cat->title}}">
+                                       <input class="form-check-input" type="checkbox" value="{{$cat->id}}" id="{{$cat->title}}" <?= $state ?> >
                                        <label class="form-check-label" for="diversity_equity_inclusion">{{$cat->title}}</label>
                                     </div>
                                     @endforeach
@@ -239,19 +241,21 @@
 
                   <div class="experiences-container">
                      <div class="row">
-                        @foreach ($speakers as $speaker)
-                        <? $fullname = App\Helpers\Helper::to_slug($speaker->first_name.' '.$speaker->last_name );?>
 
-                        <?$url = "speaker/".$speaker->id."/".$fullname;?>
+                        @foreach ($speakers as $speaker)
+                         <? $sp =  App\Speakers::where('id', $speaker)->get()->first()?>
+                        <? $fullname = App\Helpers\Helper::to_slug($sp->first_name.' '.$sp->last_name );?>
+
+                        <?$url = "speaker/".$sp->id."/".$fullname;?>
                         <div class="col-sm-6 col-md-4 col-xl-3">
                            <a href="{{ url($url) }}">
                               <div class="speaker-card">
                                  <div class="speaker-card-photo">
-                                 <img src="{{$speaker->speaker_photo}}" class="img-fluid" alt="">
+                                 <img src="{{$sp->speaker_photo}}" class="img-fluid" alt="">
                               </div>
                                  <div class="speaker-card-info">
-                                    <h6 class="speaker-card-title">{{$speaker->first_name}} {{$speaker->last_name}}<span>{{$speaker->pronouns}}</span></h6>
-                                    <p class="speaker-card-titles">{{$speaker->titles}}</p>
+                                    <h6 class="speaker-card-title">{{$sp->first_name}} {{$sp->last_name}}<span>{{$sp->pronouns}}</span></h6>
+                                    <p class="speaker-card-titles">{{$sp->titles}}</p>
                                     <p class="speaker-card-link mt-2">View Profile<i class="fa-solid fa-chevron-right ms-2"></i></p>
                                  </div>
                               </div>
