@@ -46,13 +46,14 @@
                         <a href="javascript:void(0)" class="nota-tag"><?= \App\Categories::getName($categorie) ?> </a>
                         @endforeach
 
-                        <? $topics = explode(",", $speaker->topics); ?>
-                        @foreach ($topics as $topic)
-                        <a href="javascript:void(0)" class="nota-tag"><?= \App\Topics::getName($topic) ?></a>
-                        @endforeach
+                        @if($speaker->topics !=null)
+                           <? $topics = explode(",", $speaker->topics); ?>
+                           @foreach ($topics as $topic)
+                           <a href="javascript:void(0)" class="nota-tag"><?= \App\Topics::getName($topic) ?></a>
+                           @endforeach
+                        @endif
 
-                       
-
+                      
                         <!--<a href="" class="nota-tag">DEI Elementals</a>
                         <a href="" class="nota-tag">Inclusive Leadership</a>
                         <a href="" class="nota-tag">Black History Month</a>
