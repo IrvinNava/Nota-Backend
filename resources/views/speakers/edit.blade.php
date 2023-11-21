@@ -39,10 +39,9 @@
                                 $name = Str::slug($speaker->first_name.' '.$speaker->last_name);
                                 $rutaSpeaker = url('/speaker/'.$speaker->id.'/'.$name); 
                             ?>
-                            <a id="speakerDetail" class="btn btn-primary mb-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}"><i class="fas fa-eye me-1" ></i> </a>
-                           
                             <a id="discardSpeaker" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0 delete-speaker-item" data-id="{{ $speaker->id }}"><i class="fas fa-trash me-1"></i> Delete</a>
-                            <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0 updateSpeaker" data-id="{{ $speaker->id }}"> Update</a>
+                            <a id="speakerDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}"><i class="fas fa-eye" ></i></a>
+                            <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0 updateSpeaker" data-id="{{ $speaker->id }}"><i class="me-1 fs--1" data-feather="check"></i> Update</a>
                         </div>
                     </div>
                     <div class="row g-5">

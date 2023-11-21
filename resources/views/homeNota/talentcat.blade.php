@@ -68,7 +68,7 @@
 
                   <div class="collections-filters sticky-top mb-3 mb-md-0" style="top: 20px;">
 
-                     <a href="javascript:void(0);" id="btnAllCategories" class="btn btn-lg btn-filter btn-block"><i class="fa-solid fa-arrows-rotate me-2"></i>All categories</a>
+                     <a href="{{ url('talent/') }}" class="btn btn-lg btn-filter btn-block"><i class="fa-solid fa-arrows-rotate me-2"></i>All categories</a>
                      <hr>
 
                      <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -254,7 +254,7 @@
                                  <img src="{{$sp->speaker_photo}}" class="img-fluid" alt="">
                               </div>
                                  <div class="speaker-card-info">
-                                    <h6 class="speaker-card-title">{{$sp->first_name}} {{$sp->last_name}}<span>{{$sp->pronouns}}</span></h6>
+                                    <h6 class="speaker-card-title">{{$sp->first_name}} {{$sp->last_name}}</h6>
                                     <p class="speaker-card-titles">{{$sp->titles}}</p>
                                     <p class="speaker-card-link mt-2">View Profile<i class="fa-solid fa-chevron-right ms-2"></i></p>
                                  </div>
