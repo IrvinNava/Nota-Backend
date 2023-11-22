@@ -72,7 +72,7 @@
 
                             <div class="mb-6">
                                 <h4 class="mb-3"> Speaker description</h4>
-                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'>{{ $speaker->description }}</textarea>
+                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"20rem","placeholder":"Write the description here..."}'>{{ $speaker->description }}</textarea>
                             </div>
 
                             <div class="mb-6">

@@ -5714,6 +5714,7 @@
             skin: 'oxide',
             menubar: false,
             content_style: `
+            body { font-size: 10pt; }
         .mce-content-body { 
           color: ${getColor('black')} 
         }
