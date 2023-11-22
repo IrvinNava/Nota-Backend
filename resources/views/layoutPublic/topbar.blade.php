@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://notainclusion.com/under-construction-2/">Experiences</a>
+                    <a class="nav-link active" aria-current="page" href="https://notainclusion.com/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ url('talent/') }}">Find Talent</a>
+                    <a class="nav-link active" href="../talent/">Find Talent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://notainclusion.com/inclusive-thinking/">Inclusive Thinking</a>
+                    <a class="nav-link" href="https://notainclusion.com/solution/">Solution</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://notainclusion.com/about/">About</a>

@@ -68,7 +68,7 @@
 
                   <div class="collections-filters sticky-top mb-3 mb-md-0" style="top: 20px;">
 
-                     <a href="https://speakersbureau.notainclusion.com/talent" class="btn btn-lg btn-filter btn-block"><i class="fa-solid fa-arrows-rotate me-2"></i>All categories</a>
+                     <a href="javascript:void(0);" id="btnAllCategories" class="btn btn-lg btn-filter btn-block"><i class="fa-solid fa-arrows-rotate me-2"></i>All categories</a>
                      <hr>
 
                      <div class="accordion" id="accordionPanelsStayOpenExample">

@@ -1,0 +1,126 @@
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+    @page {
+        size: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .navbar,
+    .ma_footer,
+    .ma_copyright,
+    #progression-studios-header-position,
+    .Breadcrumbs__list,
+    #pro-scroll-top {
+        display: none;
+    }
+    .site-content-video-post .width-container-pro {
+        padding-top: 50px;
+    }
+    #content-pro {
+        margin-top: 150px;
+    }
+    body {
+        font-size: inherit !important
+    }
+    .print-layout .col-md-6 {
+        width: 50%;
+    }
+    .print-layout .col-md-4 {
+        background-color: #90d !important;
+        width: 30.333333%;
+        float: left;
+    }
+    .print-layout .col-md-4 img,
+    .print-layout .col-md-4 a {
+        width: 100%;
+    }
+    .print-layout .col-md-4 img {
+        /* opacity: 0; */
+    }
+    /* .grid {
+        height: auto !important;
+    }
+    .grid-item {
+        position: relative !important;
+    } */
+    .print-layout .ma-row .col-md-6 {
+        width: 41.66666667%;
+    }
+    .print-layout .col-md-10 {
+        width: 75%;
+    }
+    .print-layout .col-md-2 {
+        width: 16.66666667%
+    }
+    .print-layout .col-md-3 {
+        width: 24%;
+    }
+    .print-layout .ma_description {
+        width: 91%;
+    }
+    .print-layout .ma_collection-section {
+        margin-top: 0;
+    }
+    .print-layout .border {
+        border: 1px solid #90d
+    }
+    .print-layout .Modal__Zoom_box .btn-zoom {
+        display: none;
+    }
+    .print-layout .Details_pice tbody {
+        vertical-align: inherit;
+    }
+    .print-layout table.Details_pice td {
+        border-style: dotted;
+    }
+    .print-layout .Details_pice ul {
+        padding: 0;
+    }
+    .print-layout .Details_pice li {
+        list-style: none;
+        padding: 0;
+    }
+    .print-layout .Name_section a {
+        font-weight: normal !important;
+        font-size: inherit !important;
+        font-size: 18px;
+    }
+    .print-layout .ma_symbol,
+    .print-layout .ma_lateral_symbol,
+    .print-layout .ma_qr {
+        display: inherit;
+    }
+    .ma_qr p {
+        white-space: nowrap;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .print-layout .ma_symbol {
+        top: 0px;
+        left: 15px;
+        width: 120px;
+    }
+    .print-layout .ma_lateral_symbol {
+        top: 0px;
+        right: 0;
+        width: 60px;
+    }
+    .print-layout .mt-5 {
+        margin-top: 0px;
+    }
+    .print-layout .ma_collection-section {
+        border: 0 !important;
+    }
+    .amparo-digital-footer,
+    #progression-studios-footer-page-builder {
+        display: none;
+    }
+    .col-md-offset-1 {
+        margin-left: 0 !important;
+    }
+    .ma-row .text-center {
+        text-align: inherit;
+    }
+}

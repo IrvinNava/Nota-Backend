@@ -1,0 +1,154 @@
+.elementor-26 .elementor-element.elementor-element-14a1a9d {
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-studios-skrn-slider-background {
+	height: 90vh;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-content-max-width {
+	max-width: 400px;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-container-max-width {
+	max-width: 89%;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-text-floating-container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-content-floating-container {
+	float: left;
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .slider-background-overlay-color {
+	background-color: transparent;
+	background-image: linear-gradient(90deg, rgba(255,255,255) 38%, rgba(0,0,0,0) 24.1%);
+}
+
+.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-studios-post-slider-main .flex-direction-nav a {
+	color: #000;
+}
+
+.elementor-26 .elementor-element.elementor-element-2e1ce41 .progression-masonry-item {
+	width: 33.330%;
+}
+
+.elementor-26 .elementor-element.elementor-element-2e1ce41 .progression-masonry-margins {
+	margin-left: -3px;
+	margin-right: -3px;
+}
+
+.elementor-26 .elementor-element.elementor-element-2e1ce41 .progression-masonry-padding-blog {
+	padding: 3px;
+}
+
+.elementor-26 .elementor-element.elementor-element-2e1ce41 h2.progression-studios-skrn-post-list-title {
+	text-align: left;
+}
+
+.elementor-26 .elementor-element.elementor-element-2e1ce41 ul.progression-filter-button-group {
+	text-align: center;
+}
+
+.elementor-26 .elementor-element.elementor-element-0fa6b1c {
+	margin-top: 70px;
+	margin-bottom: 5px;
+}
+
+.elementor-26 .elementor-element.elementor-element-b8210c7 .progression-masonry-item {
+	width: 33.330%;
+}
+
+.elementor-26 .elementor-element.elementor-element-b8210c7 .progression-masonry-margins {
+	margin-left: -3px;
+	margin-right: -3px;
+}
+
+.elementor-26 .elementor-element.elementor-element-b8210c7 .progression-masonry-padding-blog {
+	padding: 3px;
+}
+
+.elementor-26 .elementor-element.elementor-element-b8210c7 h2.progression-studios-skrn-post-list-title {
+	text-align: left;
+}
+
+.elementor-26 .elementor-element.elementor-element-b8210c7 ul.progression-filter-button-group {
+	text-align: center;
+}
+
+@media(max-width:1280px) {
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-content-max-width {
+		max-width: 300px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-container-max-width {
+		max-width: 90%;
+	}
+}
+
+@media(max-width:1024px) {
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-content-max-width {
+		max-width: 300px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-container-max-width {
+		max-width: 100%;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 h2.progression-vayvo-progression-slider-title {
+		font-size: 30px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 ul.slider-video-post-meta-list li {
+		font-size: 16px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-studios-video-slider-excerpt {
+		font-size: 14px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 a.vayvo-progression-slider-button {
+		font-size: 14px;
+	}
+	.elementor-26 .elementor-element.elementor-element-2e1ce41 .progression-masonry-item {
+		width: 50%;
+	}
+	.elementor-26 .elementor-element.elementor-element-b8210c7 .progression-masonry-item {
+		width: 50%;
+	}
+}
+
+@media(max-width:767px) {
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .slider-background-overlay-color {
+		background-color: transparent;
+		/* background-image: linear-gradient(90deg, rgba(255,255,255) 100%, rgba(0,0,0,0) 24.1%); */
+		background: linear-gradient(to bottom, rgba(8, 7, 14, 0) -95%, #fff 100%);
+	}
+	/* .elementor-26 .elementor-element.elementor-element-b6e1555 .progression-studios-skrn-slider-background {
+		height: 500px;
+	} */
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-content-max-width {
+		max-width: 100%;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-skrn-slider-container-max-width {
+		max-width: 90%;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 h2.progression-vayvo-progression-slider-title {
+		font-size: 30px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 ul.slider-video-post-meta-list li {
+		margin-right: 12px;
+		padding-right: 12px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 .progression-studios-video-slider-excerpt {
+		font-size: 14px;
+	}
+	.elementor-26 .elementor-element.elementor-element-b6e1555 a.vayvo-progression-slider-button {
+		padding: 16px 30px 16px 30px;
+		font-size: 13px;
+	}
+	.elementor-26 .elementor-element.elementor-element-2e1ce41 .progression-masonry-item {
+		width: 100%;
+	}
+	.elementor-26 .elementor-element.elementor-element-b8210c7 .progression-masonry-item {
+		width: 100%;
+	}
+}

@@ -1,0 +1,82 @@
+.elementor-54 .elementor-element.elementor-element-48fb20 {
+	border-style: solid;
+	border-width: 1px 0px 0px 0px;
+	border-color: rgba(0, 0, 0, 0.5);
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 30px 0px 12px 0px;
+}
+
+.elementor-54 .elementor-element.elementor-element-48fb20>.elementor-background-overlay {
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-54 .elementor-element.elementor-element-448ddab8>.elementor-element-populated {
+	color: #fff;
+}
+
+.elementor-54 .elementor-element.elementor-element-448ddab8 .elementor-element-populated a {
+	color: rgba(181, 187, 212, 0.79);
+}
+
+.elementor-54 .elementor-element.elementor-element-448ddab8 .elementor-element-populated a:hover {
+	color: #22b2ee;
+}
+
+.elementor-54 .elementor-element.elementor-element-4b3ba470 {
+	font-size: 15px;
+}
+
+.elementor-54 .elementor-element.elementor-element-4b3ba470>.elementor-widget-container {
+	padding: 4px 0px 0px 0px;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 {
+	text-align: right;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon {
+	background-color: rgba(255, 255, 255, 0);
+	font-size: 15px;
+	padding: 0.6em;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #4d4d54;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon i {
+	color: #ffffff;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon svg {
+	fill: #ffffff;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon:not(:last-child) {
+	margin-right: 10px;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon:hover {
+	background-color: #4d4d54;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon:hover i {
+	color: #ffffff;
+}
+
+.elementor-54 .elementor-element.elementor-element-677d5210 .elementor-social-icon:hover svg {
+	fill: #ffffff;
+}
+
+@media(max-width:767px) {
+	.elementor-54 .elementor-element.elementor-element-4b3ba470 .elementor-text-editor {
+		text-align: center;
+	}
+	.elementor-54 .elementor-element.elementor-element-677d5210 {
+		text-align: center;
+	}
+	.elementor-54 .elementor-element.elementor-element-677d5210>.elementor-widget-container {
+		margin: -25px 0px 0px 0px;
+	}
+}
