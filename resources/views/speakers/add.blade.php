@@ -24,21 +24,21 @@
                     </ol>
                 </nav>
                 <form id="form-registro" class="mb-9 mt-3">
-                    <div class="row g-3 flex-between-end mb-5">
-                        <div class="col-auto">
+
+                    <div class="row g-3 flex-between-end align-items-center mb-3 nota-stiky-controls">
+                        <div class="col-auto mt-0">
                             <h2 class="mb-2">New speaker</h2>
                             <!-- <h5 class="text-700 fw-semi-bold"></h5> -->
                         </div>
-                        <div class="col-auto d-flex align-items-center">
-
+                        <div class="col-auto d-flex align-items-center mt-0">
                             <div class="form-check form-switch me-3">
                                 <input class="form-check-input" id="speakerStatus" name="status" type="checkbox" value="1" checked>
                                 <label class="form-check-label" for="speakerStatus">Active</label>
                             </div>
-
                             <a id="publishSpeaker" href="javascript:void(0)" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="check"></i> Publish speaker</a>
                         </div>
                     </div>
+
                     <div class="row g-5">
                         <div class="col-12 col-xl-8">
 
@@ -192,6 +192,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title mb-0">Speaker photo</h4>
+                                            
                                             <div>
                                                 <div class="col-md-12">
                                                     <label for="registro-input-titulo"></label>
@@ -201,7 +202,6 @@
                                                     <input type="file" id="registro-input-gallery" class="filepond" name="upload_file" multiple>
                                                     <hr>
                                                 </div>
-
                                             </div>
 
                                             <div class="alert alert-soft-primary px-3 py-2" role="alert">

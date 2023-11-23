@@ -25,26 +25,28 @@
                 </nav>
                 <form id="form-registro" class="mb-9 mt-3">
                     <input type="hidden" id="speaker_id" name="id" class="hidden" value="{{ $speaker->id}}">
-                    <div class="row g-3 flex-between-end mb-5">
-                        <div class="col-auto">
+
+                    <div class="row g-3 flex-between-end align-items-center mb-3 nota-stiky-controls">
+                        <div class="col-auto mt-0">
                             <h2 class="mb-2">{{ $speaker->first_name }} {{ $speaker->last_name }}</h2>
                             <h5 class="text-700 fw-semi-bold">Nota's speaker</h5>
                         </div>
-                        <div class="col-auto d-flex align-items-center">
+                        <div class="col-auto d-flex align-items-center mt-0">
                             <div class="form-check form-switch me-3">
-                                <input class="form-check-input" id="speakerStatus" type="checkbox" name="status" value="{{ $speaker->status }}" <?=  ($speaker->status === 1) ? 'checked="checked"' : ''; ?>>
+                                <input class="form-check-input" id="speakerStatus" type="checkbox" name="status" value="{{ $speaker->status }}" <?= ($speaker->status === 1) ? 'checked="checked"' : ''; ?>>
                                 <label class="form-check-label" id="label-speaker-status" for="speakerStatus">Active</label>
                             </div>
-                            <? 
-                                $name = Str::slug($speaker->first_name.' '.$speaker->last_name);
-                                $rutaSpeaker = url('/speaker/'.$speaker->id.'/'.$name); 
+                            <?
+                            $name = Str::slug($speaker->first_name . ' ' . $speaker->last_name);
+                            $rutaSpeaker = url('/speaker/' . $speaker->id . '/' . $name);
                             ?>
-                           
+
                             <a id="discardSpeaker" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0 delete-speaker-item" data-id="{{ $speaker->id }}"><i class="fas fa-trash me-1"></i> Delete</a>
-                            <a id="speakerDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}" target="_blank"><i class="fas fa-eye" ></i></a>
+                            <a id="speakerDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}" target="_blank"><i class="fas fa-eye"></i></a>
                             <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0 updateSpeaker" data-id="{{ $speaker->id }}"><i class="me-1 fs--1" data-feather="check"></i> Update</a>
                         </div>
                     </div>
+
                     <div class="row g-5">
                         <div class="col-12 col-xl-8">
 
@@ -60,13 +62,13 @@
 
                                 <div class="col-md-8 mb-5">
                                     <h4 class="mb-2">Speaker titles</h4>
-                                    <input id="edit_speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. Author, Psychologist, etc..." value="{{ $speaker->titles }}"/>
+                                    <input id="edit_speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. Author, Psychologist, etc..." value="{{ $speaker->titles }}" />
                                     <small>Add titles separate with coma (,)</small>
                                 </div>
 
                                 <div class="col-md-4 mb-5">
                                     <h4 class="mb-2">Pronouns</h4>
-                                    <input id="edit_speaker_pronouns" name="speaker_pronouns" class="form-control mb-0" type="text" placeholder="e.g. She/Her" value="{{ $speaker->pronouns }}"/>
+                                    <input id="edit_speaker_pronouns" name="speaker_pronouns" class="form-control mb-0" type="text" placeholder="e.g. She/Her" value="{{ $speaker->pronouns }}" />
                                     <small>Add pronouns separate with diagonal (/)</small>
                                 </div>
                             </div>
@@ -106,12 +108,12 @@
                                                     </div>
                                                     <div id="videosList" class="mt-3">
                                                         @foreach ($videos as $video)
-                                                            <div class="video-item mb-2">
-                                                                <textarea class="form-control video-textarea speaker-item-video" name="speaker_item_video" rows="4">{{ $video->iframe }}</textarea>
-                                                                <a href="javascript:void(0);" class="btn btn-soft-danger remove-video" data-id-video="{{ $video->id }}" type="button"><span class="fa-solid fa-trash fs--"></span></a>
-                                                            </div>
+                                                        <div class="video-item mb-2">
+                                                            <textarea class="form-control video-textarea speaker-item-video" name="speaker_item_video" rows="4">{{ $video->iframe }}</textarea>
+                                                            <a href="javascript:void(0);" class="btn btn-soft-danger remove-video" data-id-video="{{ $video->id }}" type="button"><span class="fa-solid fa-trash fs--"></span></a>
+                                                        </div>
                                                         @endforeach
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,13 +125,13 @@
                                                 </div>
                                                 <div id="testimonialsList" class="mt-3">
                                                     @foreach ($testimonials as $testimonial)
-                                                        <div class="card p-2 testimonial-item mb-2">
-                                                            <textarea class="form-control" name="speaker_item_testimonial" rows="4" cols="80" placeholder="Testimonial text...">{{ $testimonial->testimonial }}</textarea>
+                                                    <div class="card p-2 testimonial-item mb-2">
+                                                        <textarea class="form-control" name="speaker_item_testimonial" rows="4" cols="80" placeholder="Testimonial text...">{{ $testimonial->testimonial }}</textarea>
 
-                                                            <input type="text" name="speaker_item_author" class="form-control" placeholder="Testimonial autor" value="{{ $testimonial->author }}">
+                                                        <input type="text" name="speaker_item_author" class="form-control" placeholder="Testimonial autor" value="{{ $testimonial->author }}">
 
-                                                            <a href="javascript:void(0);" class="btn btn-soft-danger remove-testimonial" data-id-testimonial="{{ $testimonial->id }}" type="button"><span class="fa-solid fa-trash fs--"></span></a>
-                                                        </div>
+                                                        <a href="javascript:void(0);" class="btn btn-soft-danger remove-testimonial" data-id-testimonial="{{ $testimonial->id }}" type="button"><span class="fa-solid fa-trash fs--"></span></a>
+                                                    </div>
                                                     @endforeach
                                                 </div>
                                             </div>
@@ -144,7 +146,7 @@
                                 <select class="form-select select2" id="speaker_categories" name="speaker_categories" multiple="multiple" style="width:100%;">
                                     <? $speakerCategories = explode(",", $speaker->categories); ?>
                                     @foreach ($categories as $cat)
-                                        <option value="{{ $cat->id }}" <? if(in_array($cat->id,$speakerCategories)): ?>selected<? endif ?>>{{  $cat->title }}</option>
+                                    <option value="{{ $cat->id }}" <? if (in_array($cat->id, $speakerCategories)) : ?>selected<? endif ?>>{{ $cat->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -153,7 +155,7 @@
                                 <select class="form-select select2" id="speaker_topics" name="speaker_topics" multiple="multiple" style="width:100%;">
                                     <? $speakerTopics = explode(",", $speaker->topics); ?>
                                     @foreach ($topics as $topic)
-                                        <option value="{{ $topic->id }}" <? if(in_array($topic->id,$speakerTopics)): ?>selected<? endif ?>>{{  $topic->title }}</option>
+                                    <option value="{{ $topic->id }}" <? if (in_array($topic->id, $speakerTopics)) : ?>selected<? endif ?>>{{ $topic->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -215,32 +217,18 @@
                                         <div class="card-body">
                                             <h4 class="card-title mb-4">Speaker photo</h4>
                                             <div>
-                                                <div class="row g-2"><a class="btn btn-sm btn-danger btn-drop-photo-speaker"  href="javascript:void(0)" data-><i class="icon-delete"></i>  Eliminar </a><input type="hidden" id="speaker_photos" name="speaker_photos" class="hidden" value="{{ $speaker->speaker_photo }}"><img src="{{ $speaker->speaker_photo }}" ></div>
-                                            <hr>
-                                            <label for="registro-input-titulo"></label>
-                                            <div class="gallery-container">
-                                                <div class="row">
-                                                     
+                                                <div class="row g-2">
+                                                    <input type="hidden" id="speaker_photos" name="speaker_photos" class="hidden" value="{{ $speaker->speaker_photo }}">
+                                                    <img src="{{ $speaker->speaker_photo }}">
                                                 </div>
-                                            </div>
-                                            <hr>
-
-                                            <input type="file" id="registro-input-gallery" class="filepond mt-3" name="upload_file" multiple>
-
-                                            <hr>
-                                            
-                                            <div class="collapse" id="collapseExample">
-                                                <div class="card card-body bg-danger text-white">
-                                                    <p class="card-text">La experiencia de los usuarios al acceder a un sitio web del Museo Amparo es importante para todo el ecosistema de Amparo. Por lo que antes de subir una imagen es importante asegurarse de lo siguiente:</p>
-                                                    <ul>
-                                                        <li>1.  Las imágenes deben contar con las dimensiones recomendadas previamente.</li>
-                                                        <li>2.  Las imágenes deben pasar por un proceso de compresión. Te recomendamos usar alguna herramienta en Internet como: <a href="https://tinypng.com/" target="_blank"><b><u>https://tinypng.com/</u></b> <i class="icon-one-finger-click2"></i></a></li>
-                                                    </ul>
-                                                    <p><b>¿Por qué esto es importante?</b><br>Al respetar dimensiones y pasar los recursos gráficos por un proceso de compasión ayudamos a que la carga de un sitio web suceda de manera rápida y eficiente.</p>
+                                                <hr>
+                                                <a class="btn btn-sm btn-danger btn-drop-photo-speaker" href="javascript:void(0)" data- style="width: 100%;"><i class="fas fa-trash me-1"></i> Delete</a>
+                                                <label for="registro-input-titulo"></label>
+                                                <div class="gallery-container">
+                                                    <div class="row"></div>
                                                 </div>
-                                            </div>
-                                        </div>
-
+                                                <input type="file" id="registro-input-gallery" class="filepond" name="upload_file" multiple>
+                                                <hr>
                                             </div>
 
                                             <div class="alert alert-soft-primary px-3 py-2" role="alert">
@@ -248,12 +236,13 @@
                                             </div>
 
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </form>
                 <!-- Footer -->
                 @include('layout.footer')
@@ -276,7 +265,7 @@
 
     </main>
 
-<!-- assets -->
+    <!-- assets -->
     <!-- <link href="../vendors/dropzone/dropzone.min.css" rel="stylesheet"> -->
     <script src="{{ asset('vendors/dropzone/dropzone.min.js') }}"></script>
     @include('layout.assets')
@@ -331,7 +320,7 @@
             let speakerStatus = $("#speakerStatus");
             if (speakerStatus.length) {
 
-                $("#speakerStatus").click( function(){
+                $("#speakerStatus").click(function() {
                     console.log("click");
                     if (speakerStatus.is(':checked')) {
                         speakerStatus.attr('checked', true);
@@ -345,26 +334,23 @@
             }
         });
 
-        $(function(){
-            Dropzone.options.dropzone =
-            {
-            maxFilesize: 12,
-            renameFile: function(file) {
-                var dt = new Date();
-                var time = dt.getTime();
-               return time+file.name;
-            },
-            acceptedFiles: ".jpeg,.jpg,.png,.gif",
-            addRemoveLinks: true,
-            timeout: 5000,
-            success: function(file, response) 
-            {
-                console.log(response);
-            },
-            error: function(file, response)
-            {
-               return false;
-            }
+        $(function() {
+            Dropzone.options.dropzone = {
+                maxFilesize: 12,
+                renameFile: function(file) {
+                    var dt = new Date();
+                    var time = dt.getTime();
+                    return time + file.name;
+                },
+                acceptedFiles: ".jpeg,.jpg,.png,.gif",
+                addRemoveLinks: true,
+                timeout: 5000,
+                success: function(file, response) {
+                    console.log(response);
+                },
+                error: function(file, response) {
+                    return false;
+                }
             };
         });
     </script>

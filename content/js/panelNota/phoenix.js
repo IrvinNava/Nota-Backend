@@ -5714,15 +5714,15 @@
             skin: 'oxide',
             menubar: false,
             content_style: `
-            body { font-size: 11pt; }
-        .mce-content-body { 
-          color: ${getColor('black')} 
-        }
-        .mce-content-body[data-mce-placeholder]:not(.mce-visualblocks)::before {
-          color: ${getColor('gray-400')};
-          font-weight: 400;
-          font-size: 12.8px;
-        }
+            body { font-size: 10pt; }
+            .mce-content-body { 
+              color: ${getColor('black')} 
+            }
+            .mce-content-body[data-mce-placeholder]:not(.mce-visualblocks)::before {
+              color: ${getColor('gray-400')};
+              font-weight: 400;
+              font-size: 12.8px;
+            }
         `,
             mobile: {
               theme: 'mobile',

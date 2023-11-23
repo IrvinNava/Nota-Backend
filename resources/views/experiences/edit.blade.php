@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @include('layout.header')
 
-<body data-sidebar="">
+<body data-sidebar="menuExperiences">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -19,20 +19,21 @@
                 <nav class="mb-2" aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href=" {{ url('') }} ">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ url('/experiences') }}">experiences</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('/experiences') }}">Experiences</a></li>
                         <li class="breadcrumb-item active">Unmasking Microaggressions: An Interactive Discussion</li>
                     </ol>
                 </nav>
                 <form id="form-registro" class="mb-9 mt-3">
                     <input type="hidden" id="experience_id" name="id" class="hidden" value="experience-id">
-                    <div class="row g-3 flex-between-end align-items-center mb-5">
-                        <div class="col-auto">
+
+                    <div class="row g-3 flex-between-end align-items-center mb-3 nota-stiky-controls">
+                        <div class="col-auto mt-0">
                             <h2 class="mb-2 experience-name-text">Unmasking Microaggressions: An Interactive Discussion</h2>
                             <h5 class="text-700 fw-semi-bold">Experience</h5>
                         </div>
                         <div class="col-auto d-flex align-items-center mt-0">
                             <div class="form-check form-switch me-3">
-                                <input class="form-check-input" id="experienceStatus" type="checkbox" name="status" value="">
+                                <input class="form-check-input" id="experienceStatus" type="checkbox" name="status" value="1" checked>
                                 <label class="form-check-label" id="label-experience-status" for="experienceStatus">Active</label>
                             </div>
 
@@ -41,6 +42,7 @@
                             <a id="publishexperience" class="btn btn-primary mb-2 mb-sm-0 updateexperience" data-id=""><i class="me-1 fs--1" data-feather="check"></i> Update</a>
                         </div>
                     </div>
+
                     <div class="row g-5">
                         <div class="col-12 col-xl-8">
 
@@ -52,25 +54,51 @@
                             </div>
 
                             <div class="mb-6">
-                                <h4 class="mb-3">Experience description</h4>
-                                <textarea class="tinymce" id="experience_description" name="experience_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam porro omnis ex, nulla quas aliquam voluptas accusantium dolorum asperiores optio, laborum deserunt. Similique voluptate rerum incidunt ratione quia maiores deleniti!</textarea>
+                                <h4 class="mb-3">Experience overview</h4>
+                                <textarea class="tinymce" id="experience_description" name="experience_description" data-tinymce='{"height":"20rem","placeholder":"Write the description here..."}'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam porro omnis ex, nulla quas aliquam voluptas accusantium dolorum asperiores optio, laborum deserunt. Similique voluptate rerum incidunt ratione quia maiores deleniti!</textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="mb-6">
+                                        <h4 class="mb-3">Speaker</h4>
+                                        <select class="form-select select2-one" id="speakerSelect" name="speakerSelect[]" multiple="multiple" style="width:100%;">
+                                            <option value="">Lacey Henderson</option>
+                                            <option value="">Eboo Patel</option>
+                                            <option value="" selected>Ingrid Harb</option>
+                                            <option value="">Raven Solomon</option>
+                                            <option value="">Erin Gallaghern</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="mb-6">
+                                        <h4 class="mb-3">Is it part of any collection?</h4>
+                                        <select class="form-select select2" id="collectionsSelect" name="collectionSelect[]" multiple="multiple" style="width:100%;">
+                                            <option value="" selected>Unmasking Microaggressions: An Interactive Discussion</option>
+                                            <option value="">Hispanic heritage month</option>
+                                            <option value="">Black history month</option>
+                                            <option value="">Pride month</option>
+                                            <option value="">DEI Elementals</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="mb-6">
-                                <h4 class="mb-3"> Collections</h4>
-                                <select class="form-select select2" id="experience_categories" name="experience_categories[]" multiple="multiple" style="width:100%;">
+                                <h4 class="mb-3">Related categories</h4>
+                                <select class="form-select select2" id="categoriesSelect" name="categoriesSelect[]" multiple="multiple" style="width:100%;">
                                     <option value="" selected>DE&I (Diversity, Equity, & Inclusion)</option>
                                     <option value="">Racial Equity</option>
-                                    <option value="">Mental Health</option>
+                                    <option value="" selected>Mental Health</option>
                                     <option value="">Disability Awareness</option>
-                                    <option value="">Black History Month</option>
+                                    <option value="" selected>Black History Month</option>
                                     <option value="">Hispanic Heritage Month</option>
-                                    <option value="">Asian American and Pacific Island Heritage Month</option>
+                                    <option value="" selected>Asian American and Pacific Island Heritage Month</option>
                                 </select>
                             </div>
 
                             <div class="mb-6">
-
                                 <div class="d-flex flex-row justify-content-between align-items-center">
                                     <h4 class="mb-0">Key takeaways</h4>
                                     <a id="addKeyBtn" href="javascript:void(0);" class="btn btn-sm btn-primary"><span class="fa-solid fa-plus fs--2"></span></a>
@@ -89,7 +117,6 @@
                                         <a href="javascript:void(0);" class="btn btn-soft-danger remove-key"><span class="fa-solid fa-trash fs--"></span></a>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
@@ -103,24 +130,24 @@
                                             <div class="row g-3">
 
                                                 <div class="col-12 col-sm-6 col-xl-12">
-                                                    <h5 class="mb-3 text-1000">Experience formats</h5>
+                                                    <h5 class="mb-2 text-1000">Experience formats</h5>
                                                     <div class="row g-3">
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" id="flexChecked" type="checkbox" checked="checked">
-                                                                <label class="form-check-label fw-bold fs-0 mb-3" for="flexChecked">Virtual</label>
+                                                                <input class="form-check-input" type="radio" name="experienceFormat" id="virtualFormat">
+                                                                <label class="form-check-label" for="virtualFormat">Virtual</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" id="flexChecked" type="checkbox" checked="checked">
-                                                                <label class="form-check-label fw-bold fs-0 mb-3" for="flexChecked">In person</label>
+                                                                <input class="form-check-input" type="radio" name="experienceFormat" id="personFormat">
+                                                                <label class="form-check-label" for="personFormat">In person</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-12 col-sm-6 col-xl-12 mt-0">
+                                                <div class="col-12 col-sm-6 col-xl-12 mt-2">
                                                     <h5 class="mb-2 text-1000">People count</h5>
                                                     <input id="" name="" class="form-control mb-0" type="text" value="Best for teams up to 60 people" />
                                                 </div>
@@ -139,19 +166,19 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title mb-4">Experience cover</h4>
-                                            <div class="dropzone dropzone-multiple p-0 mb-3" id="my-awesome-dropzone" data-dropzone="data-dropzone">
-                                                <div class="fallback">
-                                                    <input id="experience_photo" name="experience_photo" type="file" multiple="multiple" />
+
+                                            <div>
+                                                <div class="row g-2">
+                                                    <input type="hidden" id="speaker_photos" name="speaker_photos" class="hidden" value="">
+                                                    <img src="https://notainclusion.com/demo/resources/img/experience-photo.jpg">
                                                 </div>
-                                                <div class="dz-preview d-flex flex-wrap">
-                                                    <div class="border bg-white rounded-3 d-flex flex-center position-relative me-2 mb-2" style="height:80px;width:80px;">
-                                                        <img class="dz-image" src="../../../assets/img/23.png" alt="..." data-dz-thumbnail="data-dz-thumbnail" /><a class="dz-remove text-400" href="#!" data-dz-remove="data-dz-remove"><span data-feather="x"></span></a>
-                                                    </div>
+                                                <hr>
+                                                <a class="btn btn-sm btn-danger btn-drop-photo-speaker" href="javascript:void(0)" data- style="width: 100%;"><i class="fas fa-trash me-1"></i> Delete</a>
+                                                <label for="registro-input-titulo"></label>
+                                                <div class="gallery-container">
+                                                    <div class="row"></div>
                                                 </div>
-                                                <div class="dz-message text-600 text-center" data-dz-message="data-dz-message">
-                                                    Drag your photo here <span class="text-800">or</span>
-                                                    <button class="btn btn-link p-0" type="button">Browse from device</button><br /><img class="mt-3 me-2" src="../../../assets/img/icons/image-icon.png" width="40" alt="" />
-                                                </div>
+                                                <input type="file" id="registro-input-gallery" class="filepond" name="upload_file" multiple>
                                             </div>
 
                                             <div class="alert alert-soft-primary px-3 py-2" role="alert">
@@ -225,7 +252,7 @@
     <script type="text/javascript" src="{{ asset('js/notyf.min.js')}} "></script>
 
     <script type="text/javascript" src="{{ asset('js/panel/static/cracknd.js')}} "></script>
-    <script src="{{ asset('js/panel/administradorexperiences.js') }}"></script>
+    <script src="{{ asset('js/panel/administradorSpeakers.js') }}"></script>
 
     <!--<script src="../js/experiences.js"></script>-->
 
@@ -236,8 +263,9 @@
                 tokenSeparators: [',']
             });
 
-            $("#experience_categories").select2();
-            $("#experience_topics").select2();
+            $('.select2-one').select2({
+                maximumSelectionLength: 1
+            });
 
             let experienceStatus = $("#experienceStatus");
             if (experienceStatus.length) {

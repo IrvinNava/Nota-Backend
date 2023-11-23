@@ -24,21 +24,20 @@
                     </ol>
                 </nav>
                 <form id="form-registro" class="mb-9 mt-3">
-                    <div class="row g-3 flex-between-end mb-5">
-                        <div class="col-auto">
-                            <h2 class="mb-2">New experience</h2>
-                                    <!-- <h5 class="text-700 fw-semi-bold"></h5> -->
-                        </div>
-                        <div class="col-auto d-flex align-items-center">
 
+                    <div class="row g-3 flex-between-end align-items-center mb-3 nota-stiky-controls">
+                        <div class="col-auto mt-0">
+                            <h2 class="mb-2">New experience</h2>
+                        </div>
+                        <div class="col-auto d-flex align-items-center mt-0">
                             <div class="form-check form-switch me-3">
                                 <input class="form-check-input" id="expereinceStatus" name="status" type="checkbox" value="1" checked>
                                 <label class="form-check-label" for="expereinceStatus">Active</label>
                             </div>
-
                             <a id="publishExperience" href="javascript:void(0)" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="check"></i> Publish experience</a>
                         </div>
                     </div>
+
                     <div class="row g-5">
                         <div class="col-12 col-xl-8">
 
@@ -50,13 +49,40 @@
                             </div>
 
                             <div class="mb-6">
-                                <h4 class="mb-3">Experience description</h4>
-                                <textarea class="tinymce" id="speaker_description" name="speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
+                                <h4 class="mb-3">Experience overview</h4>
+                                <textarea class="tinymce" id="experience_description" name="experience_description" data-tinymce='{"height":"20rem","placeholder":"Write the description here..."}'></textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="mb-6">
+                                        <h4 class="mb-3">Speaker</h4>
+                                        <select class="form-select select2-one" id="speakerSelect" name="speakerSelect[]" multiple="multiple" style="width:100%;">
+                                            <option value="">Lacey Henderson</option>
+                                            <option value="">Eboo Patel</option>
+                                            <option value="">Ingrid Harb</option>
+                                            <option value="">Raven Solomon</option>
+                                            <option value="">Erin Gallaghern</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="mb-6">
+                                        <h4 class="mb-3">Is it part of any collection?</h4>
+                                        <select class="form-select select2" id="collectionsSelect" name="collectionSelect[]" multiple="multiple" style="width:100%;">
+                                            <option value="">Unmasking Microaggressions: An Interactive Discussion</option>
+                                            <option value="">Hispanic heritage month</option>
+                                            <option value="">Black history month</option>
+                                            <option value="">Pride month</option>
+                                            <option value="">DEI Elementals</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="mb-6">
-                                <h4 class="mb-3"> Collections</h4>
-                                <select class="form-select select2" id="speaker_categories" name="speaker_categories[]" multiple="multiple" style="width:100%;">
+                                <h4 class="mb-3">Related categories</h4>
+                                <select class="form-select select2" id="categoriesSelect" name="categoriesSelect[]" multiple="multiple" style="width:100%;">
                                     <option value="">DE&I (Diversity, Equity, & Inclusion)</option>
                                     <option value="">Racial Equity</option>
                                     <option value="">Mental Health</option>
@@ -68,7 +94,6 @@
                             </div>
 
                             <div class="mb-6">
-
                                 <div class="d-flex flex-row justify-content-between align-items-center">
                                     <h4 class="mb-0">Key takeaways</h4>
                                     <a id="addKeyBtn" href="javascript:void(0);" class="btn btn-sm btn-primary"><span class="fa-solid fa-plus fs--2"></span></a>
@@ -79,9 +104,7 @@
                                         <a href="javascript:void(0);" class="btn btn-soft-danger remove-key"><span class="fa-solid fa-trash fs--"></span></a>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
 
                         <div class="col-12 col-xl-4">
@@ -97,20 +120,20 @@
                                                     <div class="row g-3">
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" id="virtualFormal" type="checkbox">
-                                                                <label class="form-check-label fw-bold fs-0 mb-3" for="virtualFormal">Virtual</label>
+                                                                <input class="form-check-input" type="radio" name="experienceFormat" id="virtualFormat">
+                                                                <label class="form-check-label" for="virtualFormat">Virtual</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
                                                             <div class="form-check">
-                                                                <input class="form-check-input" id="inPersonFormat" type="checkbox">
-                                                                <label class="form-check-label fw-bold fs-0 mb-3" for="inPersonFormat">In person</label>
+                                                                <input class="form-check-input" type="radio" name="experienceFormat" id="personFormat">
+                                                                <label class="form-check-label" for="personFormat">In person</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-12 col-sm-6 col-xl-12 mt-0">
+                                                <div class="col-12 col-sm-6 col-xl-12 mt-2">
                                                     <h5 class="mb-2 text-1000">People count</h5>
                                                     <input id="" name="" class="form-control mb-0" type="text" placeholder="e.g. Best for teams up to 60 people" />
                                                 </div>
@@ -128,20 +151,15 @@
                                 <div class="col-12 col-xl-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="card-title mb-4">Experience cover</h4>
-                                            
-                                            <div class="dropzone dropzone-multiple p-0 mb-3" id="my-awesome-dropzone" data-dropzone="data-dropzone">
-                                                <div class="fallback">
-                                                    <input id="speaker_photo" name="speaker_photo" type="file" multiple="multiple" />
-                                                </div>
-                                                <div class="dz-preview d-flex flex-wrap">
-                                                    <div class="border bg-white rounded-3 d-flex flex-center position-relative me-2 mb-2" style="height:80px;width:80px;">
-                                                        <img class="dz-image" src="../../../assets/img/23.png" alt="..." data-dz-thumbnail="data-dz-thumbnail" /><a class="dz-remove text-400" href="#!" data-dz-remove="data-dz-remove"><span data-feather="x"></span></a>
+                                            <h4 class="card-title mb-0">Experience cover</h4>
+
+                                            <div>
+                                                <div class="col-md-12">
+                                                    <label for="registro-input-titulo"></label>
+                                                    <div class="gallery-container">
+                                                        <div class="row"></div>
                                                     </div>
-                                                </div>
-                                                <div class="dz-message text-600 text-center" data-dz-message="data-dz-message">
-                                                    Drag your photo here <span class="text-800">or</span>
-                                                    <button class="btn btn-link p-0" type="button">Browse from device</button><br /><img class="mt-3 me-2" src="../../../assets/img/icons/image-icon.png" width="40" alt="" />
+                                                    <input type="file" id="registro-input-gallery" class="filepond" name="upload_file" multiple>
                                                 </div>
                                             </div>
 
@@ -224,6 +242,10 @@
             $(".select2-tags").select2({
                 tags: true,
                 tokenSeparators: [',']
+            });
+
+            $('.select2-one').select2({
+                maximumSelectionLength: 1
             });
 
             let speakerStatus = $("#speakerStatus");

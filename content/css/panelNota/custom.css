@@ -307,3 +307,12 @@ label.error {
     overflow: hidden;
     white-space: nowrap;
 }
+
+.nota-stiky-controls {
+    background-color: #f5f7fa;
+    position: sticky;
+    top: 65px;
+    z-index: 5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
