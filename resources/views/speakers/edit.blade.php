@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @include('layout.header')
 
-<body data-sidebar="menuNewSpeaker">
+<body data-sidebar="">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -39,10 +39,10 @@
                                 $name = Str::slug($speaker->first_name.' '.$speaker->last_name);
                                 $rutaSpeaker = url('/speaker/'.$speaker->id.'/'.$name); 
                             ?>
-                            <a id="speakerDetail" class="btn btn-primary mb-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}"><i class="fas fa-eye me-1" ></i> </a>
                            
                             <a id="discardSpeaker" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0 delete-speaker-item" data-id="{{ $speaker->id }}"><i class="fas fa-trash me-1"></i> Delete</a>
-                            <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0 updateSpeaker" data-id="{{ $speaker->id }}"> Update</a>
+                            <a id="speakerDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="{{ $speaker->id }}" href="{{ $rutaSpeaker }}" target="_blank"><i class="fas fa-eye" ></i></a>
+                            <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0 updateSpeaker" data-id="{{ $speaker->id }}"><i class="me-1 fs--1" data-feather="check"></i> Update</a>
                         </div>
                     </div>
                     <div class="row g-5">
@@ -73,7 +73,7 @@
 
                             <div class="mb-6">
                                 <h4 class="mb-3"> Speaker description</h4>
-                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'>{{ $speaker->description }}</textarea>
+                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"20rem","placeholder":"Write the description here..."}'>{{ $speaker->description }}</textarea>
                             </div>
 
                             <div class="mb-6">

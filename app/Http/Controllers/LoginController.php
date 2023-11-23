@@ -126,7 +126,6 @@ class LoginController extends Controller
         $elemento->titles = $request->input('speaker_titles');
         $elemento->pronouns = $request->input('speaker_pronouns');
         $elemento->description =  trim($_POST['description']);
-        print_r(trim($_POST['description']));
         $elemento->categories = $_POST['categorias'];
         $elemento->startprice = $request->input('price_from');
         $elemento->limitprice = $request->input('price_to');

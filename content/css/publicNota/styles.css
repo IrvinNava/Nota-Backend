@@ -406,7 +406,7 @@ section {
 
 .nota-empty::after {
     content: '';
-    background-image: url(../img/empty-box.png);
+    background-image: url(../../img/empty-box.png);
     background-position: center top;
     background-size: contain;
     background-repeat: no-repeat;
