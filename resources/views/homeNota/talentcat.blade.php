@@ -83,12 +83,12 @@
 
                                  <div class="checkbox-list">
                                     @foreach ($categories as $cat)
-                                       <? $state = (in_array((int)$cat->id, $arregloCategorias)) ? 'checked': '' ;
-                                       ?>
+                                    <? $state = (in_array((int)$cat->id, $arregloCategorias)) ? 'checked' : '';
+                                    ?>
 
-                                       <div class="form-check">
-                                       <input class="form-check-input" type="checkbox" value="{{$cat->id}}" id="{{$cat->title}}" <?= $state ?> >
-                                       <label class="form-check-label" for="diversity_equity_inclusion">{{$cat->title}}</label>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="{{$cat->id}}" id="{{$cat->title}}" <?= $state ?>>
+                                       <label class="form-check-label" for="{{$cat->title}}">{{$cat->title}}</label>
                                     </div>
                                     @endforeach
                                     <!--<div class="form-check">
@@ -239,20 +239,26 @@
                      <div class="nota-empty">There are no results for the search you performed</div>
                   </div>
 
+                  <div class="d-flex flex-wrap mt-2 mb-4">
+                     <span class="fs-5 fw-bold me-2">Resultados para:</span>
+                     <span class="nota-badge">DE&I (Diversity, Equity, & Inclusion)</span>
+                     <span class="nota-badge">Disability Awareness</span>
+                  </div>
+
                   <div class="experiences-container">
                      <div class="row">
 
                         @foreach ($speakers as $speaker)
-                         <? $sp =  App\Speakers::where('id', $speaker)->get()->first()?>
-                        <? $fullname = App\Helpers\Helper::to_slug($sp->first_name.' '.$sp->last_name );?>
+                        <? $sp =  App\Speakers::where('id', $speaker)->get()->first() ?>
+                        <? $fullname = App\Helpers\Helper::to_slug($sp->first_name . ' ' . $sp->last_name); ?>
 
-                        <?$url = "speaker/".$sp->id."/".$fullname;?>
+                        <? $url = "speaker/" . $sp->id . "/" . $fullname; ?>
                         <div class="col-sm-6 col-md-4 col-xl-3">
                            <a href="{{ url($url) }}">
                               <div class="speaker-card">
                                  <div class="speaker-card-photo">
-                                 <img src="{{$sp->speaker_photo}}" class="img-fluid" alt="">
-                              </div>
+                                    <img src="{{$sp->speaker_photo}}" class="img-fluid" alt="">
+                                 </div>
                                  <div class="speaker-card-info">
                                     <h6 class="speaker-card-title">{{$sp->first_name}} {{$sp->last_name}}</h6>
                                     <p class="speaker-card-titles">{{$sp->titles}}</p>
@@ -282,24 +288,23 @@
    @include('layoutPublic.footer')
    @include('layoutPublic.assets')
    <script src="{{ asset('js/panelNota/speakers.js') }}"></script>
-   <script >
-      
-      $(document).ready(function () {
-   console.log("Speakers.js");
+   <script>
+      $(document).ready(function() {
+         console.log("Speakers.js");
 
-   var body = $("body");
+         var body = $("body");
 
-   setTimeout( function(){
-      let hash = window.location.hash;
-      let finalHash = hash.replace('#','');
-      if (hash.length) {
-         $("#filters .btn").removeClass("active");
-         // $container.isotope({ filter: finalHash });
-         $("li[data-filter='"+finalHash+"']").addClass("active");
-      }
-   },500);
+         setTimeout(function() {
+            let hash = window.location.hash;
+            let finalHash = hash.replace('#', '');
+            if (hash.length) {
+               $("#filters .btn").removeClass("active");
+               // $container.isotope({ filter: finalHash });
+               $("li[data-filter='" + finalHash + "']").addClass("active");
+            }
+         }, 500);
 
-});
+      });
    </script>
 
 </body>

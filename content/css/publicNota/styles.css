@@ -100,6 +100,8 @@ a {
 
 .navbar {
     box-shadow: 0px 12px 18px -6px rgba(34, 62, 109, 0.1);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 
 .navbar-nav .nav-link {
@@ -666,6 +668,20 @@ section {
 
 .experience-takeaways p {
     margin: 0;
+}
+
+.nota-badge {
+    background-color: rgba(138, 69, 255, 0.3);
+    border: 2px solid #8a45ff !important;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 3px 10px;
+    color: #4a05ad;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }
 
 /* Footer */

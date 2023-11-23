@@ -86,7 +86,7 @@
                                     @foreach ($categories as $cat)
                                        <div class="form-check">
                                        <input class="form-check-input" type="checkbox" value="{{$cat->id}}" id="{{$cat->title}}">
-                                       <label class="form-check-label" for="diversity_equity_inclusion">{{$cat->title}}</label>
+                                       <label class="form-check-label" for="{{$cat->title}}">{{$cat->title}}</label>
                                     </div>
                                     @endforeach
                                     <!--<div class="form-check">
