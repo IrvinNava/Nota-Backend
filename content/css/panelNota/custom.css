@@ -300,3 +300,10 @@ label.error {
     color: #dc3545;
     font-size: 14px;
 }
+
+.experience-name-text {
+    text-overflow: ellipsis;
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+}

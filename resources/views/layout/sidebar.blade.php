@@ -40,7 +40,7 @@
                     </div>
                     <!-- item-->
                     <div class="nav-item-wrapper">
-                        <a id="menuNewSpeaker" class="nav-link label-1" href="{{ url('add.speaker') }}" role="button" data-bs-toggle="" aria-expanded="false">
+                        <a id="menuNewSpeaker" class="nav-link label-1" href="{{ url('add-speaker') }}" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="plus-circle"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">New</span></span>

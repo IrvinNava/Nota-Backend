@@ -296,3 +296,9 @@ use Illuminate\Support\Facades\Route;
     Route::post('image/upload/store','ImageUploadController@fileStore');
     Route::post('image/delete','ImageUploadController@fileDestroy');
 
+    // Collections
+
+    Route::get('/experiences', 'ExperiencesController@experiences');
+    Route::get('/add-experience', 'ExperiencesController@addExperience');
+    Route::get('/experienceDetail', 'ExperiencesController@updateExperience');
+
