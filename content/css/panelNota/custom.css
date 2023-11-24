@@ -316,3 +316,24 @@ label.error {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.filepond--panel-root {
+    border-radius: 0.5em;
+    background-color: #f5f7fa !important;
+    border: 1px dashed #cbd0dd;
+}
+
+.filepond--drop-label > label {
+    font-size: 14px !important;
+}
+
+.filepond--label-action {
+    color: #9139ff;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.filepond--root,
+.filepond--root .filepond--drop-label {
+  height: 180px;
+}
