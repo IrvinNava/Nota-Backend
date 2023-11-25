@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @include('layout.header')
 
-<body data-sidebar="menuExperiences">
+<body data-sidebar="menuCollections">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -24,22 +24,22 @@
                     </ol>
                 </nav>
                 <form id="form-registro" class="mb-9 mt-3">
-                    <input type="hidden" id="experience_id" name="id" class="hidden" value="experience-id">
+                    <input type="hidden" id="collection_id" name="id" class="hidden" value="collection-id">
 
                     <div class="row g-3 flex-between-end align-items-center mb-3 nota-stiky-controls">
                         <div class="col-auto mt-0">
-                            <h2 class="mb-2 experience-name-text">[Colleccion Name]</h2>
+                            <h2 class="mb-2 collection-name-text">[Colleccion Name]</h2>
                             <h5 class="text-700 fw-semi-bold">Collection</h5>
                         </div>
                         <div class="col-auto d-flex align-items-center mt-0">
                             <div class="form-check form-switch me-3">
-                                <input class="form-check-input" id="experienceStatus" type="checkbox" name="status" value="1" checked>
-                                <label class="form-check-label" id="label-experience-status" for="experienceStatus">Active</label>
+                                <input class="form-check-input" id="collectionStatus" type="checkbox" name="status" value="1" checked>
+                                <label class="form-check-label" id="label-collection-status" for="collectionStatus">Active</label>
                             </div>
 
-                            <a id="discardexperience" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0 delete-experience-item" data-id=""><i class="fas fa-trash me-1"></i> Delete</a>
-                            <a id="experienceDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="" href="" target="_blank"><i class="fas fa-eye"></i></a>
-                            <a id="publishexperience" class="btn btn-primary mb-2 mb-sm-0 updateexperience" data-id=""><i class="me-1 fs--1" data-feather="check"></i> Update</a>
+                            <a id="discardColellection" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0 delete-collection-item" data-id=""><i class="fas fa-trash me-1"></i> Delete</a>
+                            <a id="collectionDetail" class="btn btn-phoenix-secondary mb-2 me-2 mb-sm-0 " data-id="" href="" target="_blank"><i class="fas fa-eye"></i></a>
+                            <a id="updateCollection" class="btn btn-primary mb-2 mb-sm-0 updatecollection" data-id=""><i class="me-1 fs--1" data-feather="check"></i> Update</a>
                         </div>
                     </div>
 
@@ -178,17 +178,17 @@
                 maximumSelectionLength: 1
             });
 
-            let experienceStatus = $("#experienceStatus");
-            if (experienceStatus.length) {
+            let collectionStatus = $("#collectionStatus");
+            if (collectionStatus.length) {
 
-                $("#experienceStatus").click(function() {
+                $("#collectionStatus").click(function() {
                     console.log("click");
-                    if (experienceStatus.is(':checked')) {
-                        experienceStatus.attr('checked', true);
-                        experienceStatus.val(1);
+                    if (collectionStatus.is(':checked')) {
+                        collectionStatus.attr('checked', true);
+                        collectionStatus.val(1);
                     } else {
-                        experienceStatus.attr('checked', false);
-                        experienceStatus.val(0);
+                        collectionStatus.attr('checked', false);
+                        collectionStatus.val(0);
                     }
                 });
 

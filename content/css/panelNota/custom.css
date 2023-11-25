@@ -317,14 +317,27 @@ label.error {
     padding-bottom: 15px;
 }
 
+.dark .nota-stiky-controls {
+    background-color: #0f111a;
+}
+
 .filepond--panel-root {
     border-radius: 0.5em;
     background-color: #f5f7fa !important;
     border: 1px dashed #cbd0dd;
 }
 
+.dark .filepond--panel-root {
+    background-color: #141824 !important;
+    border: 1px dashed #52596d;
+}
+
 .filepond--drop-label > label {
     font-size: 14px !important;
+}
+
+.dark .filepond--drop-label {
+    color: #9fa6bc;
 }
 
 .filepond--label-action {
@@ -336,4 +349,8 @@ label.error {
 .filepond--root,
 .filepond--root .filepond--drop-label {
   height: 180px;
+}
+
+.dark .select2-results__option--selectable {
+    color: #0f111a;
 }

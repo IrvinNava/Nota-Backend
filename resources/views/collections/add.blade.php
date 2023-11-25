@@ -3,7 +3,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @include('layout.header')
 
-<body data-sidebar="menuNewExperience">
+<body data-sidebar="menuNewCollection">
 
     <!-- ===============================================-->
     <!--    Main Content-->

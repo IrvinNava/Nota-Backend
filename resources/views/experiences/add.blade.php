@@ -44,7 +44,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h4 class="mb-3">Name</h4>
-                                    <input id="speaker_name" name="speaker_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
+                                    <input id="expereince_name" name="expereince_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
                                 </div>
                             </div>
 
@@ -248,17 +248,17 @@
                 maximumSelectionLength: 1
             });
 
-            let speakerStatus = $("#speakerStatus");
-            if (speakerStatus.length) {
+            let expereinceStatus = $("#expereinceStatus");
+            if (expereinceStatus.length) {
 
-                $("#speakerStatus").click(function() {
+                $("#expereinceStatus").click(function() {
                     console.log("click");
-                    if (speakerStatus.is(':checked')) {
-                        speakerStatus.attr('checked', true);
-                        speakerStatus.val(1);
+                    if (expereinceStatus.is(':checked')) {
+                        expereinceStatus.attr('checked', true);
+                        expereinceStatus.val(1);
                     } else {
-                        speakerStatus.attr('checked', false);
-                        speakerStatus.val(0);
+                        expereinceStatus.attr('checked', false);
+                        expereinceStatus.val(0);
                     }
                 });
 
