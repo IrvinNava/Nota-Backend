@@ -280,6 +280,11 @@ use Illuminate\Support\Facades\Route;
     Route::post('speaker/drop', 'LoginController@dropSpeaker');
     Route::get('/speaker/{id}/{name}', 'LoginController@speaker');
 
+    Route::get('/experiences-list', 'HomeNotaController@experiences');
+    Route::get('/experience', 'HomeNotaController@experience');
+    Route::get('/collection', 'HomeNotaController@collection');
+    Route::get('/booking-questionnaire', 'HomeNotaController@bookingauestionnaire');
+    Route::get('/proposal', 'HomeNotaController@proposal');
 
     Route::get('/proposals', 'LoginController@proposals');
     Route::get('/add-proposal', 'LoginController@addProposal');
