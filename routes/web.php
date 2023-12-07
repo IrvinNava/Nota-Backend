@@ -279,12 +279,19 @@ use Illuminate\Support\Facades\Route;
     Route::get('/speakerDetail/{id}/{name}', 'LoginController@speakerDetail');
     Route::post('speaker/drop', 'LoginController@dropSpeaker');
     Route::get('/speaker/{id}/{name}', 'LoginController@speaker');
-
+    Route::get('/experiences', 'ExperiencesController@experiences');
+    Route::get('/add-experience', 'ExperiencesController@addExperience');
+    Route::get('/experienceDetail', 'ExperiencesController@updateExperience');
+    Route::get('/collections', 'CollectionsController@collections');
+    Route::get('/add-collection', 'CollectionsController@addCollection');
+    Route::get('/collectionDetail', 'CollectionsController@updateCollection');
+    
     Route::get('/experiences-list', 'HomeNotaController@experiences');
     Route::get('/experience', 'HomeNotaController@experience');
     Route::get('/collection', 'HomeNotaController@collection');
     Route::get('/booking-questionnaire', 'HomeNotaController@bookingauestionnaire');
     Route::get('/proposal', 'HomeNotaController@proposal');
+
 
     Route::get('/proposals', 'LoginController@proposals');
     Route::get('/add-proposal', 'LoginController@addProposal');
@@ -300,14 +307,4 @@ use Illuminate\Support\Facades\Route;
     Route::get('image/upload','ImageUploadController@fileCreate');
     Route::post('image/upload/store','ImageUploadController@fileStore');
     Route::post('image/delete','ImageUploadController@fileDestroy');
-
-    // Experiences
-    Route::get('/experiences', 'ExperiencesController@experiences');
-    Route::get('/add-experience', 'ExperiencesController@addExperience');
-    Route::get('/experienceDetail', 'ExperiencesController@updateExperience');
-
-    // Collections
-    Route::get('/collections', 'CollectionsController@collections');
-    Route::get('/add-collection', 'CollectionsController@addcollection');
-    Route::get('/collectionDetail', 'CollectionsController@updateCollection');
 
