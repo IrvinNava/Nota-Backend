@@ -684,6 +684,42 @@ section {
     margin-right: 5px;
 }
 
+/* Modal */
+
+.nota-bg-light {
+    background-color: #f2f6ff;
+}
+
+.modal-content .form-control {
+    background-color: #f2f6ff;
+    border: 0;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.speaker-modal-title {
+    color: #223e6d!important;
+    font-weight: 700;
+}
+
+.speaker-modal-title span {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(132deg,#a027ff,#4b9aff 49%,#00f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.modal-content .error-message,
+.modal-content .sent-message,
+.modal-content .loading {
+    display: none;
+}
+
+.modal-recaptcha-text p {
+    font-size: 10px;;
+}
+
 /* Footer */
 
 footer {
