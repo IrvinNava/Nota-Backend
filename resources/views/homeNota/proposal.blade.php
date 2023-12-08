@@ -366,7 +366,7 @@
                         <div class="d-flex flex-column justify-content-between p-5 h-100">
                            <div>
                               <img width="120" src="https://notainclusion.com/wp-content/uploads/2023/06/logo.png" alt="Notainclusion Logo" class="">
-                              <h2 class="speaker-modal-title mt-3 mb-5">¡Great, Let's start with your contact details<span></span></h2>
+                              <h2 class="speaker-modal-title mt-3 mb-5">¡Great! Let's start with your contact details<span></span></h2>
                            </div>
                            <img src="https://notainclusion.com/wp-content/uploads/2023/10/inclusive_thinking.png" alt="Notainclusion s peakers" class="img-fluid">
                         </div>

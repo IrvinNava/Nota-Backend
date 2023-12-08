@@ -99,7 +99,7 @@
                         </ul>
                      </div>
 
-                     <a href="" class="btn btn-lg btn-purple btn-block rounded-pill px-5 mt-3 text-center">Get this experience</a>
+                     <a href="#" class="btn btn-lg btn-purple btn-block rounded-pill px-5 mt-3 text-center"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get this experience</a>
 
                   </div>
                </div>
@@ -141,6 +141,87 @@
             </div>
          </div>
       </section>
+
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-body p-0">
+
+                  <div class="row g-0">
+                     <div class="col-md-6 nota-bg-light">
+                        <div class="d-flex flex-column justify-content-between p-5 h-100">
+                           <div>
+                              <img width="120" src="https://notainclusion.com/wp-content/uploads/2023/06/logo.png" alt="Notainclusion Logo" class="">
+                              <h2 class="speaker-modal-title mt-3 mb-5">¡Great! You chose:<span>[Experience name]</span></h2>
+                           </div>
+                           <!-- ELI AQUÍ ABAJO PORFA IGUAL DEBE CAMBIAR LA IMAGEN POR LA QUE SE HAYA GUARDADO PARA LA EXPERIENCE POR FAVOR, AL TERMINAR PORFA BORRA ESTE COMENTARIO JEJE -->
+                           <img src="https://notainclusion.com/demo/resources/img/experience-photo.jpg" alt="Notainclusion Experience" class="img-fluid rounded-3">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+
+                        <div class="d-flex justify-content-end py-4 px-4">
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="pb-3 px-5">
+                           <form id="phpcontactformSpeaker" class="php-email-form2" data-recaptcha-site-key="6LeJtWscAAAAADaftEpstS3-Vir26QO1cysjDewK">
+                              <div class="row">
+                                 <div class="form-group">
+                                    <label for="fullnameP" class="form-label">Full name</label>
+                                    <input type="text" placeholder="" id="fullnameP" name="fullname" class="form-control" required="">
+                                 </div>
+                                 <input type="hidden" name="speakers" id="proposal" class="form-control" value="">
+
+                                 <div class="form-group">
+                                    <label for="companyP" class="form-label">Company name</label>
+                                    <input type="text" class="form-control" name="company" id="companyP" required="">
+                                 </div>
+
+                                 <div class="form-group">
+                                    <label for="emailP" class="form-label">Email</label>
+                                    <input type="email" name="email" class="form-control" id="emailP" required="">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="messageP" class="form-label">Your message</label>
+                                    <textarea class="form-control mb-0" name="message" id="messageP" rows="4" required=""></textarea>
+                                 </div>
+
+                                 <div>
+                                    <div class="loading mt-3"><i class="fa-solid fa-spinner fa-spin-pulse"></i> Loading</div>
+                                    <div class="error-message mt-3">
+                                       <div class="alert alert-danger" role="alert">
+                                          ¡Oh! It looks like something has gone wrong. You can try again.
+                                       </div>
+                                    </div>
+                                    <div class="sent-message mt-3">
+                                       <div class="alert alert-success" role="alert">
+                                          <i class="fa-solid fa-check me-1"></i> Your message has been sent. Thank you!
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </form>
+
+                           <div class="d-flex justify-content-end mt-3 mb-5">
+                              <button type="button" class="btn btn-sm btn-light rounded-pill px-3" data-bs-dismiss="modal">Cancel</button>
+                              <div id="contact-btnP" class="ms-2"><button type="submit" class="btn btn-sm btn-purple rounded-pill px-4 popbtn">Submit</button></div>
+                           </div>
+
+                           <div class="modal-recaptcha-text">
+                              <p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms</a> apply.</p>
+                           </div>
+
+                        </div>
+                     </div>
+                  </div>
+
+
+               </div>
+            </div>
+         </div>
+      </div>
+
    </main>
 
    @include('layoutPublic.footer')
