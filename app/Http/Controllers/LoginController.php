@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Helpers\Helper;
 use App\Proposals;
 use App\Speakers;
 use App\SpeakerCategories;
@@ -265,11 +266,21 @@ class LoginController extends Controller
         $elemento->client_name = $request->input('client_name');
         $elemento->client_email = $request->input('client_email');
         $elemento->message = $_POST['description'];
-        $elemento->categories = $_POST['categorias'];
-        $elemento->topics = $_POST['topics'];
+        $elemento->categories = (isset($_POST['categorias'])) ? $_POST['categorias'] : NULL;
+        $elemento->topics = (isset($_POST['topics'])) ? $_POST['topics'] : NULL;
         $elemento->custom = $request->input('custom');
         $elemento->status = 1;
         $elemento->save();
+
+        if(isset($_POST['send'])){
+            $data = [
+                    'NAME' => $elemento->client_name,
+                    'EMAIL' => $elemento->client_email,
+                    'MESSAGE' => $elemento->message,
+                    'URL' => url('proposal/' . $elemento->id)
+            ];
+            $message = Helper::send_email([$elemento->client_email], 'Proposal: '.$request->input('name'), 'proposal-email', $data);
+        }
 
         $response = ['status' => true, 'message' => $message, 'data' => $elemento->id];
         return json_encode($response);

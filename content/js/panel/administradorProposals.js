@@ -83,6 +83,59 @@ $(function (){
             });
         });
 
+        $('#saveSendProposal').click(function(){
+            console.log('send email');
+            let button = $('#saveProposalDraft');
+            let form = $('#form-registro');
+            if(form.valid()){
+                var description = tinymce.get("proposal_message").getContent();
+                var categorias = $('#speaker_categories').select2('val');
+                var ids = [];
+                $($("#speakersAdded").find('.speaker-item')).each(function() {
+                  console.log($( this ).data('id'));
+                    ids.push($( this ).data('id'));
+                    console.log(ids);
+                    $('#speakersList').val(ids);
+                });
+
+                var custom = $('#speakersList').val();
+
+                $.ajax({
+                    url: BASEURL + '/save-proposal',
+                    type: 'POST',
+                    data: form.serialize() + '&send=true' + '&description=' + description + '&categorias=' + categorias + '&custom=' + custom ,
+                    beforeSend: function () {
+                        console.log("before send");
+                        $('#saveSendProposal').html('<i class="fa fa-cog fa-spin"></i>&nbsp;Saving...').attr('disabled', 'disabled');
+                    },
+                    success: function(response) {
+                         console.log("success");
+                        let data = $.parseJSON(response);
+                        console.log(data);
+                        if(data.status){
+                            $('#saveSendProposal').html('<i class="me-1 fs--1" data-feather="check"></i> Save and Send').removeAttr('disabled');
+                            swal({
+                                title:"Finished",
+                                text: data.message,
+                                type: "success",
+                                showCancelButton: false,
+                            },
+                            function(isConfirm){
+                                if(isConfirm)
+                                    window.location = BASEURL + '/proposals';
+                            });
+                        } else {
+                            swal({"html": true, "title": "Wait!, there's some missing data", "text": data.message, "type":"error"});
+                            $('button.confirm').html('<i class="me-1 fs--1" data-feather="check"> Publish Speaker').removeAttr('disabled');
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown){
+                        swal({"html": true, "title": "Error", "text": errorThrown, "type":"error"});
+                        $('button.confirm').html('<i class="fa fa-save"></i> Publish Speaker').removeAttr('disabled');
+                    }
+                });
+            }
+        });
 
 
         $('#saveProposalDraft').click(function(){
@@ -137,7 +190,6 @@ $(function (){
                     }
                 });
             }
-        
         });
 
         body.on('click', '.delete-proposal-item', function () {

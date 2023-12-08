@@ -1,6 +1,7 @@
 <?php
 namespace App\Helpers;
 
+
 class Helper {
     public static function human_filesize($size, $precision = 2){
         $units = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
@@ -83,5 +84,33 @@ class Helper {
     public static function getYoutubeCode($url){
         preg_match_all("#(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}#", $url, $match);
         return (count($match)) ? $match[0][0] : null;
+    }
+
+    public static function send_email($emails_to, $subject, $template, $keystoreplace = null, $attachments = null, $from = null, $emails_cc = null, $emails_bcc = null){
+        try{
+                
+                $sendgrid = new \SendGrid("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");
+                $email = new \SendGrid\Mail\Mail();
+                if(!empty($from))
+                    $email->setFrom($from['email'], $from['name']);
+                else
+                    $email->setFrom('contact@notainclusion.com', '[Nota Platform] - Ingrid Harb');
+                foreach ($emails_to as $to)
+                    $email->addTo($to);
+                if(!empty($keystoreplace)){
+                    $template_html = file_get_contents(URL_ROOT . "emails/$template.html");
+                    foreach ($keystoreplace as $key => $content)
+                        $template_html = str_replace("@$key@", $content, $template_html);
+                }
+
+                $email->setSubject($subject);
+                $email->addContent('text/html', $template_html);
+                $response = $sendgrid->send($email);
+                return ['status' => true, 'message' => $response];
+           
+        } catch (\Exception $exception){
+            $response = ['status' => false, 'message' => $exception->getMessage()];
+        }
+        return $response;
     }
 }

@@ -27,8 +27,8 @@
                         </div>
                         <div class="col-auto">
                             <a id="discardProposal" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" type="button"><i class="fas fa-trash me-1"></i>  Discard</a>
-                            <a id="saveProposalDraft" class="btn btn-phoenix-primary me-2 mb-2 mb-sm-0"  href="javascript:void(0)" type="button" ><i class="me-1 fs--1" data-feather="save"></i> Save draft</a>
-                            <a id="saveSendProposal" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="send"></i> Save and Send</a>
+                            <a id="saveProposalDraft" class="saveProposalDraft btn btn-phoenix-primary me-2 mb-2 mb-sm-0"  href="javascript:void(0)" type="button" ><i class="me-1 fs--1" data-feather="save"></i> Save draft</a>
+                            <a id="saveSendProposal" class="saveProposalDraft btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="send"></i> Save and Send</a>
                         </div>
                     </div>
                     <div class="row g-5">
@@ -44,7 +44,7 @@
                                                     <div class="d-flex flex-wrap mb-2">
                                                         <h5 class="text-1000 me-2">Proposal Name</h5>
                                                     </div>
-                                                    <input type="text" class="form-control" id="proposal_name" name="name" value="">
+                                                    <input type="text" class="form-control required" id="proposal_name" name="name" value="" >
                                                     <small>This input is just for identification</small>
                                                 </div>
                                             </div>
@@ -69,7 +69,7 @@
                         <div class="col-12 col-xl-8">
                             <div class="border-bottom mb-6 pb-6">
                                 <h4 class="mb-3">Add speakers by category</h4>
-                                <select class="form-select select2 required" id="speaker_categories" name="speaker_categories" multiple="multiple" style="width:100%;">
+                                <select class="form-select select2" id="speaker_categories" name="speaker_categories" multiple="multiple" style="width:100%;">
                                     @foreach ($categories as $cat)
                                         <option value="{{ $cat->id }}"> {{ $cat->title }}</option>
                                     @endforeach
