@@ -684,17 +684,426 @@ section {
     margin-right: 5px;
 }
 
+.section-title h1,
+.section-title h2,
+.section-title h4 {
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 800 !important;
+    color: #223e6d;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-weight: 800 !important;
+}
+
+.section-title h4 {
+    font-weight: 600 !important;
+}
+
+.nota-text-gradient {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(132deg, #a027ff, #4b9aff 49%, #00f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+    overflow-x: hidden;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0
+    }
+
+    100% {
+        left: -50%
+    }
+}
+
+.marquee_row {
+    height: 70px;
+    width: 100%;
+}
+
+.marquee_parent {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.marquee-block {
+    height: 70px;
+    width: calc(9000px);
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.marquee-inner {
+    display: block;
+    width: 100%;
+    position: absolute;
+    animation: marqueeLeft 50s linear infinite;
+}
+
+.marquee-inner span {
+    float: left;
+}
+
+.marquee-item {
+    height: 70px;
+    width: 170px;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    float: left;
+    transition: all .2s ease-out;
+}
+
+.marquee-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Testimonial Slider */
+
+.testimonial-text {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 12px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 20px;
+    box-shadow: 0px 3px 10px 10px rgba(0, 0, 0, 0.03)
+}
+
+.testimonial-text::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: -6px;
+    background-color: #fff;
+    left: 55px;
+    transform: rotate(45deg);
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-author {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.testimonial-author h6,
+.testimonial-author h5 {
+    margin-bottom: 0;
+}
+
+.testimonial-author h5 {
+    color: #223e6d;
+    padding-bottom: 5px;
+}
+
+.testimonial-author h6 {
+    font-style: italic;
+    color: rgba(0, 0, 0, .6);
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.testimonial-photo {
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+.slick-slider {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0 0 0px;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-slide {
+    position: relative;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.divilife-3-col-feature-blurb-slider {
+    position: relative;
+}
+
+.et_pb_blurb {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.divilife-3-col-feature-blurb-slider .slick-arrow,
+.divilife-3-col-feature-blurb-slider .slick-arrow:hover,
+.divilife-3-col-feature-blurb-slider .slick-arrow:focus {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    color: transparent;
+    outline: none;
+    background: rgba(122, 105, 230, 0.3);
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    height: 40px;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divilife-3-col-feature-blurb-slider .slick-prev {
+    left: -50px;
+}
+
+.divilife-3-col-feature-blurb-slider .slick-next {
+    right: -50px;
+}
+
+.divilife-3-col-feature-blurb-slider .slick-arrow:before {
+    color: #000;
+    background: transparent;
+    opacity: 1;
+    font-size: 18px;
+    vertical-align: middle;
+    color: #7a69e6;
+    text-align: center;
+}
+
+.divilife-3-col-feature-blurb-slider .slick-arrow:hover:before {
+    opacity: 0.8;
+}
+
+ul.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background-color: #6b8ec9;
+    border-radius: 10px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #1dcfff;
+}
+
+/* Wizard */
+
+#smartwizard {
+    background-color: #fafcff;
+}
+
+.sw>.progress>.progress-bar {
+    background-image: linear-gradient(132deg, #a027ff, #4b9aff 49%, #00f0ff);
+}
+
+.sw-theme-arrows>.nav .nav-link.active {
+    background-image: linear-gradient(90deg, #a027ff, #4b9aff 49%, #00f0ff);
+}
+
+.sw-theme-arrows>.nav .nav-link.active::after {
+    border-left-color: #00efff !important;
+}
+
+.sw-theme-arrows>.nav .nav-link.error {
+    /* color: #dc3545 !important; */
+    border-color: #dc3545 !important;
+    background-color: #dc3545 !important;
+    background-image: none;
+}
+
+.sw-theme-arrows>.nav .nav-link.error::after {
+    border-left-color: #dc3545 !important;
+}
+
+.sw-theme-arrows>.nav .nav-link::after, .sw-theme-arrows>.nav .nav-link::before,
+.sw-theme-arrows>.nav .nav-link {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+.sw .toolbar>.sw-btn {
+    background-color: #223e6d !important;
+    border: 1px solid #223e6d !important;
+    border-radius: 25px !important;
+    -webkit-border-radius: 25px !important;
+    -moz-border-radius: 25px !important;
+    -ms-border-radius: 25px !important;
+    -o-border-radius: 25px !important;
+}
+
+.sw .toolbar>.btn-success {
+    color: #fff;
+    border-radius: 25px;
+}
+
+#smartwizard .form-label {
+    margin-bottom: 0.5rem;
+    color: #848991;
+}
+
+.smrtwzrd-tab-title {
+    padding-left: 32px  ;
+}
+
+.smrtwzrd-tab-title p {
+    font-weight: 500;
+}
+
+.smrtwzrd-tab-title span {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.sw.sw-justified>.nav .nav-link {
+    text-align: left !important;
+}
+
+.spkr-type-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.spkr-type-item,
+.budget-container  .btn {
+    border: 2px solid #8a45ff !important;
+    padding: 3px 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    color: #223e6d;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.spkr-type-item:hover,
+.budget-container .btn:hover {
+    background-color: rgba(138, 69, 255, 0.3);
+    /* color: #fff; */
+}
+
+.type-active,
+.btn-outline-info:active,
+.btn-check:active+.btn-outline-info,
+.btn-check:checked+.btn-outline-info,
+.btn-outline-info.active,
+.btn-outline-info.dropdown-toggle.show,
+.btn-outline-info:active {
+    background-color: #8a45ff !important;
+    color: #fff !important;
+}
+
+@media(max-width: 980px) {
+    .divilife-3-col-feature-blurb-slider .slick-prev {
+        left: -32px;
+    }
+
+    .divilife-3-col-feature-blurb-slider .slick-next {
+        right: -30px;
+    }
+}
+
+@media(max-width: 499px) {
+    .divilife-3-col-feature-blurb-slider .slick-prev {
+        left: -26px;
+    }
+
+    .divilife-3-col-feature-blurb-slider .slick-next {
+        right: -24px;
+    }
+}
+
 /* Modal */
 
 .nota-bg-light {
     background-color: #f2f6ff;
 }
 
+.modal-content .form-label {
+    /* margin-bottom: 0; */
+}
+
 .modal-content .form-control {
     background-color: #f2f6ff;
     border: 0;
     font-size: 14px;
-    padding: 10px;
     margin-bottom: 10px;
 }
 

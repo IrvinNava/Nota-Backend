@@ -214,14 +214,14 @@
                         <div class="d-flex flex-column justify-content-between p-5 h-100">
                            <div>
                               <img width="120" src="https://notainclusion.com/wp-content/uploads/2023/06/logo.png" alt="Notainclusion Logo" class="">
-                              <h2 class="speaker-modal-title mt-5">¡Great, you want to hire <span>{{ $speaker->first_name }} {{ $speaker->last_name }}!</span></h2>
+                              <h2 class="speaker-modal-title mt-3">¡Great, you want to hire <span>{{ $speaker->first_name }} {{ $speaker->last_name }}!</span></h2>
                            </div>
                            <img src="https://notainclusion.com/wp-content/uploads/2023/07/nota_portada.png" alt="Notainclusion s peakers" class="img-fluid">
                         </div>
                      </div>
                      <div class="col-md-6">
 
-                        <div class="d-flex justify-content-end pt-4 px-4">
+                        <div class="d-flex justify-content-end py-4 px-4">
                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="pb-3 px-5">
@@ -229,22 +229,22 @@
                               <div class="row">
                                  <div class="form-group">
                                     <label for="fullnameS" class="form-label">Full name</label>
-                                    <input type="text" placeholder="" id="fullnameS" name="fullname" class="form-control form-control-sm" required="">
+                                    <input type="text" placeholder="" id="fullnameS" name="fullname" class="form-control" required="">
                                  </div>
-                                 <input type="hidden" name="speakers" id="speaker" class="form-control form-control-sm" value="{{ $speaker->first_name }} {{ $speaker->last_name }}">
+                                 <input type="hidden" name="speakers" id="speaker" class="form-control" value="{{ $speaker->first_name }} {{ $speaker->last_name }}">
 
                                  <div class="form-group">
                                     <label for="companyS" class="form-label">Company name</label>
-                                    <input type="text" class="form-control form-control-sm" name="company" id="companyS" required="">
+                                    <input type="text" class="form-control" name="company" id="companyS" required="">
                                  </div>
 
                                  <div class="form-group">
                                     <label for="emailS" class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control form-control-sm" id="emailS" required="">
+                                    <input type="email" name="email" class="form-control" id="emailS" required="">
                                  </div>
                                  <div class="form-group">
                                     <label for="messageS" class="form-label">Your message</label>
-                                    <textarea class="form-control form-control-sm mb-0" name="message" id="messageS" rows="4" required="">I want to hire {{ $speaker->first_name }} {{ $speaker->last_name }}</textarea>
+                                    <textarea class="form-control mb-0" name="message" id="messageS" rows="4" required="">I want to hire {{ $speaker->first_name }} {{ $speaker->last_name }}</textarea>
                                  </div>
 
                                  <div>
